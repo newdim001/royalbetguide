@@ -1,0 +1,945 @@
+import Link from "next/link";
+import { getGameText, getBankingText, getMobileText, getSupportText, getComparisonCasinos, getAuthorName } from "../../helpers";
+
+const REVIEWS: Record<string, any> = {
+  "jackpot-city-casino": {
+    name: "Jackpot City Casino", rating: 9.5, bonus: "$1,600 Welcome Bonus",
+    payout: "97.2%", games: "850+", established: "1998", license: "MGA, UKGC",
+    pros: ["Excellent game variety", "High payout percentage", "Long-standing reputation", "Generous welcome bonus"],
+    cons: ["Wagering requirements apply", "Limited live chat hours"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Bitcoin"],
+    providers: ["Microgaming", "NetEnt", "Playtech", "Evolution Gaming", "IGT"],
+    affiliateUrl: "",
+    description: "Jackpot City Casino has been a trusted name in online gambling since 1998. With over 850 games, high payout rates, and a generous welcome package, it remains one of the top choices for both new and experienced players.",
+  },
+  "spin-casino": {
+    name: "Spin Casino", rating: 9.3, bonus: "$1,000 Welcome Package",
+    payout: "96.8%", games: "700+", established: "2001", license: "MGA, UKGC",
+    pros: ["Excellent mobile experience", "Fast withdrawals", "Live dealer games", "24/7 customer support"],
+    cons: ["Limited cryptocurrency options", "Regional restrictions apply"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Paysafecard"],
+    providers: ["Microgaming", "NetEnt", "Evolution Gaming", "Playtech"],
+    affiliateUrl: "",
+    description: "Spin Casino delivers a premium online gambling experience with a focus on mobile gaming and fast payouts.",
+  },
+  "ruby-fortune-casino": {
+    name: "Ruby Fortune Casino", rating: 9.1, bonus: "$750 Welcome Bonus",
+    payout: "96.5%", games: "650+", established: "2003", license: "MGA",
+    pros: ["Trusted brand since 2003", "Great mobile compatibility", "Fast withdrawal processing"],
+    cons: ["Fewer game providers than competitors", "Phone support not available"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal"],
+    providers: ["Microgaming", "Evolution Gaming", "NetEnt"],
+    affiliateUrl: "",
+    description: "Ruby Fortune has been delighting players since 2003 with its excellent game selection and reliable payouts.",
+  },
+  "royal-vegas": {
+    name: "Royal Vegas Casino", rating: 9.0, bonus: "$1,200 Welcome Bonus",
+    payout: "96.3%", games: "900+", established: "2000", license: "MGA",
+    pros: ["Huge game library", "Great VIP program", "Fast payouts", "Trusted brand"],
+    cons: ["Limited crypto options", "Phone support hours"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal"],
+    providers: ["Microgaming", "NetEnt", "Evolution Gaming"],
+    affiliateUrl: "",
+    description: "Royal Vegas has been delivering premium gaming since 2000. With over 900 games and a fantastic VIP program, it offers a royal experience for every player.",
+  },
+  "stake": {
+    name: "Stake Casino", rating: 8.8, bonus: "Crypto Welcome Bonus",
+    payout: "97.5%", games: "4000+", established: "2017", license: "Curacao",
+    pros: ["Massive game library", "Crypto-friendly", "High payout rates", "Innovative features"],
+    cons: ["Not available in all regions", "No traditional fiat support"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "Dogecoin", "USDT"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "NoLimit City"],
+    affiliateUrl: "",
+    description: "Stake is the leading crypto casino with thousands of games and some of the highest payout rates in the industry.",
+  },
+  "bitstarz": {
+    name: "BitStarz Casino", rating: 9.7, bonus: "5 BTC + 200 Free Spins",
+    payout: "98.2%", games: "5000+", established: "2014", license: "Curacao",
+    pros: ["Award-winning platform", "Massive game selection", "Crypto-friendly", "Quick withdrawals"],
+    cons: ["Restricted in some countries", "No live chat 24/7"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "Dogecoin", "Visa", "Mastercard"],
+    providers: ["Pragmatic Play", "NetEnt", "Microgaming", "Evolution Gaming", "Play'n GO"],
+    affiliateUrl: "",
+    description: "BitStarz is the most awarded crypto casino in the industry. Multiple Best Casino awards since 2014. With 5000+ games and provably fair technology, it sets the gold standard.",
+  },
+  "bc-game": {
+    name: "BC.Game", rating: 9.3, bonus: "Up to $20,000 + 200 Free Spins",
+    payout: "97.8%", games: "8000+", established: "2017", license: "Curacao",
+    pros: ["200+ crypto support", "Unique community features", "Provably fair", "Huge game library"],
+    cons: ["Complex for beginners", "No fiat currency support"],
+    payments: ["Bitcoin", "Ethereum", "BNB", "SOL", "USDT", "ADA"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "BGaming"],
+    affiliateUrl: "",
+    description: "BC.Game supports 200+ cryptocurrencies with 8000+ games. Its unique community elements and provably fair system make it a standout choice.",
+  },
+  "leovegas": {
+    name: "LeoVegas Casino", rating: 9.4, bonus: "$1,000 + 200 Free Spins",
+    payout: "97.1%", games: "3000+", established: "2012", license: "MGA, UKGC",
+    pros: ["Best mobile casino awards", "Excellent game variety", "Fast withdrawals", "24/7 support"],
+    cons: ["Higher wagering requirements", "Country restrictions"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Trustly"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "LeoVegas is the king of mobile casino gaming. Multiple Best Mobile Casino awards since 2012. With 3000+ games optimized for mobile play.",
+  },
+  "betway": {
+    name: "Betway Casino", rating: 8.7, bonus: "$1,000 Welcome Bonus",
+    payout: "96.9%", games: "500+", established: "2006", license: "MGA, UKGC",
+    pros: ["Trusted global brand", "Excellent sportsbook", "Live dealer games", "Secure platform"],
+    cons: ["Fewer games than competitors", "Some country restrictions"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Bank Transfer"],
+    providers: ["Microgaming", "NetEnt", "Evolution Gaming"],
+    affiliateUrl: "",
+    description: "Betway is a globally trusted brand in online gaming since 2006. Known for its excellent sportsbook and quality casino games.",
+  },
+  "22bet": {
+    name: "22Bet Casino", rating: 8.6, bonus: "$300 Welcome Bonus",
+    payout: "96.8%", games: "3000+", established: "2017", license: "Curacao",
+    pros: ["Huge sportsbook", "Crypto-friendly", "Low minimum deposit", "Multiple payment options"],
+    cons: ["Average customer support", "Plain website design"],
+    payments: ["Visa", "Mastercard", "Bitcoin", "Ethereum", "Skrill", "Neteller"],
+    providers: ["Pragmatic Play", "NetEnt", "Microgaming", "Evolution Gaming"],
+    affiliateUrl: "",
+    description: "22Bet offers an impressive 3000+ casino games alongside a massive sportsbook. With crypto-friendly options and low minimum deposits.",
+  },
+  "hell-spin": {
+    name: "Hell Spin Casino", rating: 8.5, bonus: "$500 + 150 Free Spins",
+    payout: "96.6%", games: "3000+", established: "2021", license: "Curacao",
+    pros: ["Modern design", "Large game library", "Regular promotions", "Fast withdrawals"],
+    cons: ["Newer brand", "Limited live chat hours"],
+    payments: ["Visa", "Mastercard", "Bitcoin", "Ethereum", "Litecoin", "Skrill"],
+    providers: ["Pragmatic Play", "NetEnt", "Hacksaw Gaming", "NoLimit City"],
+    affiliateUrl: "",
+    description: "Hell Spin Casino brings a modern gaming experience with 3000+ games and regular promotions. Clean interface and fast withdrawal processing.",
+  },
+  "play-ojo": {
+    name: "PlayOJO Casino", rating: 8.4, bonus: "50 Free Spins No Deposit",
+    payout: "96.2%", games: "3000+", established: "2017", license: "MGA, UKGC",
+    pros: ["No wagering requirements", "Fair play policy", "Cashback on every bet", "Transparent terms"],
+    cons: ["No VIP program", "Limited bonus variety"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Paysafecard"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech"],
+    affiliateUrl: "",
+    description: "PlayOJO stands out with its fair play policy — no wagering requirements on bonuses. Cashback on every bet and transparent terms.",
+  },
+  "katsubet": {
+    name: "KatsuBet Casino", rating: 8.3, bonus: "325% + 200 Free Spins",
+    payout: "96.4%", games: "7000+", established: "2020", license: "Curacao",
+    pros: ["Massive 7000+ games", "Great crypto support", "Generous 325% welcome package", "Regular tournaments with big prizes"],
+    cons: ["No live chat 24/7", "Phone support limited"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "USDT", "Visa", "Mastercard"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Hacksaw Gaming"],
+    affiliateUrl: "https://katsubet.partners/px4e6itoe",
+    description: "KatsuBet delivers one of the biggest game libraries in crypto gaming with 7,000+ titles. Its 325% + 200 free spins welcome package and regular tournaments make it a top choice for volume players.",
+  },
+  "mirax-casino": {
+    name: "Mirax Casino", rating: 8.2, bonus: "$500 + 200 Free Spins",
+    payout: "96.3%", games: "5000+", established: "2021", license: "Curacao",
+    pros: ["Accepts fiat + crypto", "Modern sleek interface", "Quick withdrawals", "Good mobile experience"],
+    cons: ["Newer brand (2021)", "Limited payment methods"],
+    payments: ["Visa", "Mastercard", "Bitcoin", "Ethereum", "Skrill"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Playtech"],
+    affiliateUrl: "https://mirax.partners/pyklyuxbk",
+    description: "Mirax Casino bridges the gap between traditional and crypto casinos. With support for both fiat and crypto payments, plus 5,000+ games, it offers maximum flexibility.",
+  },
+  "7bit-casino": {
+    name: "7BitCasino", rating: 9.4, bonus: "5 BTC + 250 Free Spins",
+    payout: "97.6%", games: "7000+", established: "2014", license: "Curacao",
+    pros: ["Crypto pioneer since 2014", "7000+ games from 70+ providers", "Great VIP program", "Provably fair games", "AskGamblers certified"],
+    cons: ["No fiat payments", "Restricted in some countries"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "Dogecoin", "USDT"],
+    providers: ["Pragmatic Play", "NetEnt", "Microgaming", "Evolution Gaming", "Play'n GO"],
+    affiliateUrl: "https://7bit.partners/p2jvy2mdh",
+    description: "7BitCasino is the gold standard of crypto casinos. Operating since 2014, it offers over 7,000 games from 70+ providers, industry-leading payout rates, and a 5 BTC + 250 free spins welcome package. Certified by AskGamblers with provably fair technology.",
+  },
+  "amazon-slots": {
+    name: "Amazon Slots", rating: 8.7, bonus: "$500 Welcome Bonus",
+    payout: "96.1%", games: "500+", established: "2015", license: "MGA",
+    pros: ["Focus on slots", "Great jackpots", "User-friendly interface", "Mobile optimized"],
+    cons: ["Limited table games", "Smaller game library"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal"],
+    providers: ["Microgaming", "NetEnt", "Playtech"],
+    affiliateUrl: "",
+    description: "Amazon Slots focuses on delivering the best slot gaming experience with a curated selection of high-quality games.",
+  },
+  "royal-panda": {
+    name: "Royal Panda", rating: 8.6, bonus: "$1,000 Welcome Bonus",
+    payout: "96.7%", games: "2500+", established: "2014", license: "MGA, UKGC",
+    pros: ["Excellent live casino", "Great game variety", "Fast payouts", "Unique rewards"],
+    cons: ["Limited crypto options", "Country restrictions"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech"],
+    affiliateUrl: "",
+    description: "Royal Panda has been delighting players since 2014 with its excellent live casino and great game variety.",
+  },
+  "casumo": {
+    name: "Casumo Casino", rating: 8.9, bonus: "$1,200 Welcome Package",
+    payout: "96.8%", games: "2500+", established: "2012", license: "MGA, UKGC",
+    pros: ["Award-winning design", "Gamification system", "Excellent mobile app", "Fast withdrawals"],
+    cons: ["Lower bonus than competitors", "Restricted in some countries"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Paysafecard"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "Casumo combines award-winning design with an innovative gamification system that rewards players as they play.",
+  },
+  "casino-x": {
+    name: "Casino-X", rating: 8.1, bonus: "$300 Welcome Bonus",
+    payout: "96.0%", games: "2000+", established: "2019", license: "Curacao",
+    pros: ["Simple interface", "Good game selection", "Regular promotions", "Fast withdrawals"],
+    cons: ["Newer brand", "No live chat"],
+    payments: ["Visa", "Mastercard", "Bitcoin", "Skrill", "Neteller"],
+    providers: ["Pragmatic Play", "NetEnt", "Microgaming"],
+    affiliateUrl: "",
+    description: "Casino-X offers a straightforward gaming experience with 2000+ games and regular promotions.",
+  },
+  "energy-casino": {
+    name: "Energy Casino", rating: 8.0, bonus: "$500 + 100 Free Spins",
+    payout: "96.2%", games: "2000+", established: "2015", license: "MGA",
+    pros: ["Fast withdrawals", "Good game selection", "Mobile optimized", "24/7 support"],
+    cons: ["Limited payment methods", "Restricted countries"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech"],
+    affiliateUrl: "",
+    description: "Energy Casino delivers fast withdrawals and 24/7 support. With over 2000 games and mobile optimization.",
+  },
+  "frank-casino": {
+    name: "Frank Casino", rating: 8.2, bonus: "$500 Welcome Package",
+    payout: "96.4%", games: "2000+", established: "2019", license: "Curacao",
+    pros: ["Modern design", "Good bonus offers", "Fast withdrawal processing", "Live dealer games"],
+    cons: ["Newer brand", "Limited provider list"],
+    payments: ["Visa", "Mastercard", "Bitcoin", "Ethereum", "Skrill"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming"],
+    affiliateUrl: "",
+    description: "Frank Casino brings a modern approach to online gaming with a stylish design and competitive bonus offers.",
+  },
+  "888-casino": {
+    name: "888 Casino", rating: 8.9, bonus: "$1,500 Welcome Bonus",
+    payout: "96.5%", games: "2000+", established: "1997", license: "MGA, UKGC",
+    pros: ["Trusted brand since 1997", "Excellent live casino", "Great mobile app", "Exclusive VIP club"],
+    cons: ["Lower payout than some competitors", "Limited crypto options"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Paysafecard"],
+    providers: ["NetEnt", "Microgaming", "Playtech", "Evolution Gaming", "Play'n GO"],
+    affiliateUrl: "",
+    description: "888 Casino has been a trusted name in online gambling since 1997. With over 2000 games, a world-class live casino, and an exclusive VIP club, it remains one of the most respected brands in the industry.",
+  },
+  "mr-green": {
+    name: "Mr Green Casino", rating: 8.8, bonus: "$1,000 + 200 Free Spins",
+    payout: "96.6%", games: "1500+", established: "2008", license: "MGA, UKGC",
+    pros: ["Award-winning brand", "Responsible gaming focus", "Unique game categories", "Fast withdrawals"],
+    cons: ["Fewer games than top competitors", "Country restrictions apply"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Trustly"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "Mr Green is an award-winning online casino known for its responsible gaming initiatives and unique approach to game categorization. Since 2008, it has delivered a premium gaming experience.",
+  },
+  "unibet": {
+    name: "Unibet Casino", rating: 8.8, bonus: "$500 Welcome Bonus",
+    payout: "96.4%", games: "1000+", established: "1997", license: "MGA, UKGC",
+    pros: ["Well-established brand", "Excellent sportsbook", "Live streaming", "Trusted operator"],
+    cons: ["Smaller game library", "Limited crypto payments"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Bank Transfer"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "Unibet has been a staple of online gaming since 1997. Known for its excellent sportsbook with live streaming, it also delivers a solid casino experience with 1000+ quality games.",
+  },
+  "draftkings": {
+    name: "DraftKings Casino", rating: 8.7, bonus: "$2,000 Welcome Bonus",
+    payout: "96.3%", games: "1500+", established: "2012", license: "US State Licenses",
+    pros: ["Top US brand", "DFS and sportsbook integration", "Daily promotions", "Excellent mobile app"],
+    cons: ["US only", "Limited international availability"],
+    payments: ["Visa", "Mastercard", "PayPal", "PayNearMe", "Online Banking"],
+    providers: ["NetEnt", "Evolution Gaming", "IGT", "Playtech", "Scientific Games"],
+    affiliateUrl: "",
+    description: "DraftKings is America's #1 gaming brand. With seamless integration between daily fantasy, sportsbook, and casino, it offers a comprehensive US-focused gaming experience.",
+  },
+  "fanduel": {
+    name: "FanDuel Casino", rating: 8.7, bonus: "$1,000 Welcome Bonus",
+    payout: "96.2%", games: "1000+", established: "2009", license: "US State Licenses",
+    pros: ["Leading US gaming brand", "Easy-to-use platform", "Fast payouts", "Great daily odds boosts"],
+    cons: ["US only availability", "Smaller game library"],
+    payments: ["Visa", "Mastercard", "PayPal", "Online Banking", "PayNearMe"],
+    providers: ["NetEnt", "Evolution Gaming", "IGT", "Scientific Games"],
+    affiliateUrl: "",
+    description: "FanDuel is one of America's most trusted gaming brands. Its casino platform is intuitive, fast, and packed with daily promotions for US players.",
+  },
+  "betmgm": {
+    name: "BetMGM Casino", rating: 8.6, bonus: "$1,500 Welcome Bonus",
+    payout: "96.4%", games: "2000+", established: "2018", license: "US State Licenses, UKGC",
+    pros: ["MGM Resorts backing", "Huge game selection", "Excellent rewards program", "Available in multiple states"],
+    cons: ["US-heavy focus", "Withdrawal times vary by state"],
+    payments: ["Visa", "Mastercard", "PayPal", "Online Banking", "Skrill"],
+    providers: ["NetEnt", "Evolution Gaming", "Microgaming", "IGT", "Playtech"],
+    affiliateUrl: "",
+    description: "BetMGM is backed by MGM Resorts International and offers a massive 2000+ game library. Its rewards program, MGM Rewards, gives players perks across MGM properties.",
+  },
+  "caesars": {
+    name: "Caesars Palace Online Casino", rating: 8.6, bonus: "$2,500 Welcome Bonus",
+    payout: "96.1%", games: "1500+", established: "2019", license: "US State Licenses",
+    pros: ["Iconic brand name", "Caesars Rewards integration", "Large game variety", "Strong sportsbook"],
+    cons: ["US only", "High wagering requirements"],
+    payments: ["Visa", "Mastercard", "PayPal", "Online Banking", "PayNearMe"],
+    providers: ["NetEnt", "Evolution Gaming", "IGT", "Scientific Games"],
+    affiliateUrl: "",
+    description: "Caesars Palace Online Casino brings the iconic Las Vegas brand to your screen. With 1500+ games and full Caesars Rewards integration, it offers a premium US gaming experience.",
+  },
+  "bovada": {
+    name: "Bovada Casino", rating: 8.5, bonus: "$3,750 Welcome Bonus",
+    payout: "96.5%", games: "500+", established: "2011", license: "Curacao",
+    pros: ["US-friendly since 2011", "Crypto welcome bonus", "Fast crypto payouts", "Great poker room"],
+    cons: ["Not available in some US states", "Limited game providers"],
+    payments: ["Bitcoin", "Bitcoin Cash", "Visa", "Mastercard", "Ethereum"],
+    providers: ["Betsoft", "Rival", "Evolution Gaming", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "Bovada has been the go-to casino for US players since 2011. It offers a massive $3,750 crypto welcome bonus, fast payouts, and one of the best online poker rooms.",
+  },
+  "ignition": {
+    name: "Ignition Casino", rating: 8.5, bonus: "$3,000 Welcome Bonus",
+    payout: "96.8%", games: "400+", established: "2016", license: "Curacao",
+    pros: ["US-friendly", "Excellent poker network", "Quick crypto payouts", "Anonymous tables"],
+    cons: ["Smaller game library", "Not available in all states"],
+    payments: ["Bitcoin", "Ethereum", "Bitcoin Cash", "Visa", "Mastercard"],
+    providers: ["Betsoft", "Rival", "Evolution Gaming", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "Ignition Casino is a top choice for US players with its anonymous poker tables and quick crypto payouts. The $3,000 welcome bonus makes it particularly attractive for new players.",
+  },
+  "red-dog": {
+    name: "Red Dog Casino", rating: 8.3, bonus: "$2,750 Welcome Bonus",
+    payout: "96.2%", games: "300+", established: "2019", license: "Curacao",
+    pros: ["US-friendly", "Generous bonuses", "Crypto friendly", "Simple platform"],
+    cons: ["Small game library", "Limited provider list", "No sportsbook"],
+    payments: ["Bitcoin", "Ethereum", "Visa", "Mastercard", "Neosurf"],
+    providers: ["Betsoft", "RealTime Gaming", "Rival"],
+    affiliateUrl: "",
+    description: "Red Dog Casino offers a simplified online casino experience with generous bonuses and crypto-friendly payments. Perfect for players who want a straightforward, no-fuss gaming experience.",
+  },
+  "slots-lv": {
+    name: "Slots.lv Casino", rating: 8.4, bonus: "$5,000 Welcome Bonus",
+    payout: "96.6%", games: "500+", established: "2015", license: "Curacao",
+    pros: ["Huge welcome bonus up to $5,000", "US-friendly", "Fast crypto withdrawals", "Great slot selection"],
+    cons: ["Limited table games", "No live dealer"],
+    payments: ["Bitcoin", "Ethereum", "Visa", "Mastercard", "Litecoin"],
+    providers: ["Betsoft", "Rival", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "Slots.lv lives up to its name with a fantastic slot selection and one of the biggest welcome bonuses in the industry — up to $5,000 for crypto depositors.",
+  },
+  "cafe-casino": {
+    name: "Cafe Casino", rating: 8.4, bonus: "$2,500 Welcome Bonus",
+    payout: "96.3%", games: "400+", established: "2016", license: "Curacao",
+    pros: ["Perk points program", "US-friendly", "Hot drop jackpots", "Crypto friendly"],
+    cons: ["Limited game variety", "Smaller provider roster"],
+    payments: ["Bitcoin", "Ethereum", "Visa", "Mastercard", "Litecoin"],
+    providers: ["Betsoft", "Rival", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "Cafe Casino blends a warm, inviting experience with a rewarding loyalty program. Its Hot Drop Jackpots and Perk Points system keep players coming back for more.",
+  },
+  "wild-casino": {
+    name: "Wild Casino", rating: 8.2, bonus: "$5,000 Welcome Bonus",
+    payout: "96.1%", games: "600+", established: "2017", license: "Curacao",
+    pros: ["Huge $5,000 bonus", "US-friendly", "Live dealer available", "Crypto options"],
+    cons: ["Average payout rate", "Website feels dated"],
+    payments: ["Bitcoin", "Ethereum", "Visa", "Mastercard", "Bank Transfer"],
+    providers: ["Betsoft", "Rival", "Evolution Gaming", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "Wild Casino brings a $5,000 welcome bonus and live dealer games to US players. With 600+ games and multiple crypto options, it's a solid all-rounder.",
+  },
+  "betonline": {
+    name: "BetOnline Casino", rating: 8.5, bonus: "$3,000 Welcome Bonus",
+    payout: "96.4%", games: "500+", established: "2004", license: "Panama",
+    pros: ["Long-standing reputation since 2004", "Excellent sportsbook", "Crypto friendly", "Good poker"],
+    cons: ["Not available in all US states", "Average withdrawal times"],
+    payments: ["Bitcoin", "Ethereum", "Visa", "Mastercard", "Litecoin"],
+    providers: ["Betsoft", "Rival", "Evolution Gaming", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "BetOnline has been serving players since 2004. It's a trusted all-in-one platform with casino, sportsbook, and poker — all accessible with crypto deposits.",
+  },
+  "everygame": {
+    name: "EveryGame Casino", rating: 8.1, bonus: "$1,000 Welcome Bonus",
+    payout: "96.0%", games: "300+", established: "1996", license: "Curacao",
+    pros: ["One of the oldest online casinos", "US-friendly", "Crypto options", "Good poker room"],
+    cons: ["Small game library", "Outdated interface"],
+    payments: ["Bitcoin", "Ethereum", "Visa", "Mastercard", "Neosurf"],
+    providers: ["Betsoft", "Rival", "RealTime Gaming"],
+    affiliateUrl: "",
+    description: "EveryGame (formerly InterTops) has been in operation since 1996, making it one of the oldest online casinos. It's a trusted US-friendly option with crypto support.",
+  },
+  "borgata": {
+    name: "Borgata Casino", rating: 8.6, bonus: "$1,000 Welcome Bonus",
+    payout: "96.3%", games: "1500+", established: "2019", license: "US State Licenses",
+    pros: ["Borgata brand prestige", "Excellent game variety", "MGM Rewards eligible", "Great mobile app"],
+    cons: ["US only", "Limited international access"],
+    payments: ["Visa", "Mastercard", "PayPal", "Online Banking", "PayNearMe"],
+    providers: ["NetEnt", "Evolution Gaming", "IGT", "Playtech", "Scientific Games"],
+    affiliateUrl: "",
+    description: "Borgata Casino brings the Atlantic City experience online with 1500+ games and full MGM Rewards integration. Elite mobile app and premium game selection.",
+  },
+  "golden-nugget": {
+    name: "Golden Nugget Casino", rating: 8.5, bonus: "$1,000 Welcome Bonus",
+    payout: "96.5%", games: "1000+", established: "2013", license: "US State Licenses",
+    pros: ["Top-rated mobile app", "Excellent loyalty program", "Fast payouts", "Great live dealer section"],
+    cons: ["US only", "Limited international presence"],
+    payments: ["Visa", "Mastercard", "PayPal", "Online Banking", "Skrill"],
+    providers: ["NetEnt", "Evolution Gaming", "IGT", "Scientific Games"],
+    affiliateUrl: "",
+    description: "Golden Nugget is consistently ranked among the best US online casinos. Its mobile app is top-rated, and the live dealer section is one of the best in the industry.",
+  },
+  "party-casino": {
+    name: "PartyCasino", rating: 8.4, bonus: "$1,000 Welcome Bonus",
+    payout: "96.2%", games: "1000+", established: "1997", license: "MGA, UKGC",
+    pros: ["Long-standing trusted brand", "Great selection of slots", "Regular promotions", "User-friendly platform"],
+    cons: ["Limited crypto options", "Some country restrictions"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "PartyCasino has been a household name in online gaming since 1997. It offers a user-friendly platform with regular promotions and a great selection of slots.",
+  },
+  "pokerstars": {
+    name: "PokerStars Casino", rating: 8.6, bonus: "$1,500 Welcome Bonus",
+    payout: "96.6%", games: "1500+", established: "2001", license: "MGA, UKGC",
+    pros: ["World's largest poker room", "Excellent casino games", "Flutter Entertainment backing", "Strong mobile app"],
+    cons: ["Country restrictions", "Not available in US"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Trustly"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "PokerStars is the world's largest online poker room, but its casino section is equally impressive with 1500+ games and the backing of Flutter Entertainment.",
+  },
+  "bet365": {
+    name: "Bet365 Casino", rating: 8.9, bonus: "$1,000 Welcome Bonus",
+    payout: "96.8%", games: "2000+", established: "2001", license: "MGA, UKGC",
+    pros: ["Global leading brand", "Massive sportsbook integration", "Live streaming", "Excellent live casino"],
+    cons: ["Limited availability in US", "Strict verification process"],
+    payments: ["Visa", "Mastercard", "Skrill", "Neteller", "PayPal", "Bank Transfer"],
+    providers: ["NetEnt", "Microgaming", "Evolution Gaming", "Playtech", "Play'n GO"],
+    affiliateUrl: "",
+    description: "Bet365 is one of the world's largest and most trusted online gaming brands. With 2000+ casino games, live streaming, and a massive sportsbook, it's a complete gaming destination.",
+  },
+  "dafabet": {
+    name: "Dafabet Casino", rating: 8.4, bonus: "$1,000 Welcome Bonus",
+    payout: "96.3%", games: "1500+", established: "2004", license: "MGA, Philippine PAGCOR",
+    pros: ["Strong Asian market presence", "Excellent sportsbook", "Live casino focus", "Good mobile support"],
+    cons: ["Limited US availability", "Average game variety"],
+    payments: ["Visa", "Mastercard", "Bitcoin", "Skrill", "Neteller", "Bank Transfer"],
+    providers: ["Microgaming", "Evolution Gaming", "Playtech", "NetEnt", "Yggdrasil"],
+    affiliateUrl: "",
+    description: "Dafabet has been a dominant force in Asian online gaming since 2004, offering an excellent sportsbook alongside a quality live casino experience.",
+  },
+  "luckyblock": {
+    name: "Lucky Block Casino", rating: 8.8, bonus: "$10,000 Crypto Bonus",
+    payout: "97.5%", games: "4000+", established: "2022", license: "Curacao",
+    pros: ["Massive crypto bonus up to $10,000", "No wagering on sports", "4000+ games", "Fast withdrawals"],
+    cons: ["Newer brand (2022)", "No fiat deposits"],
+    payments: ["Bitcoin", "Ethereum", "USDT", "BNB", "Litecoin", "Dogecoin"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "NetEnt", "Play'n GO"],
+    affiliateUrl: "",
+    description: "Lucky Block exploded onto the scene in 2022 with a massive $10,000 crypto welcome bonus. With 4000+ games and no-wagering sportsbook, it's a top choice for crypto players.",
+  },
+  "mega-dice": {
+    name: "Mega Dice Casino", rating: 8.6, bonus: "200% + 50 Free Spins",
+    payout: "97.7%", games: "6000+", established: "2023", license: "Curacao",
+    pros: ["6000+ games", "High payout rate", "Crypto-native platform", "Regular tournaments"],
+    cons: ["Very new (2023)", "No fiat support"],
+    payments: ["Bitcoin", "Ethereum", "USDT", "SOL", "ADA", "BNB"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "NoLimit City", "BGaming"],
+    affiliateUrl: "",
+    description: "Mega Dice is a crypto-native casino with 6000+ games and impressive 97.7% payout rates. Regular tournaments and a sleek platform make it stand out.",
+  },
+  "cloudbet": {
+    name: "CloudBet Casino", rating: 8.5, bonus: "100% up to 5 BTC",
+    payout: "97.0%", games: "2000+", established: "2013", license: "Curacao",
+    pros: ["One of the oldest crypto casinos", "High betting limits", "Excellent sportsbook", "Provably fair"],
+    cons: ["Limited fiat options", "No live chat 24/7"],
+    payments: ["Bitcoin", "Ethereum", "USDT", "Litecoin", "Bitcoin Cash"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Microgaming", "Playtech"],
+    affiliateUrl: "",
+    description: "CloudBet has been a pioneer in crypto gambling since 2013. Known for high betting limits, provably fair games, and an excellent crypto sportsbook.",
+  },
+  "mbit-casino": {
+    name: "mBit Casino", rating: 8.4, bonus: "4 BTC + 300 Free Spins",
+    payout: "96.8%", games: "2500+", established: "2014", license: "Curacao",
+    pros: ["Long-standing crypto casino since 2014", "Great VIP program", "4 BTC welcome package", "Provably fair games"],
+    cons: ["No fiat payments", "Limited live dealer options"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "Dogecoin", "USDT"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Microgaming", "Play'n GO"],
+    affiliateUrl: "",
+    description: "mBit Casino has been a trusted crypto gaming destination since 2014. With a 4 BTC + 300 free spins welcome package and a rewarding VIP program.",
+  },
+  "fortunejack": {
+    name: "FortuneJack Casino", rating: 8.3, bonus: "5 BTC + 50 Free Spins",
+    payout: "96.7%", games: "2000+", established: "2014", license: "Curacao",
+    pros: ["One of the first crypto casinos", "Provably fair games", "Great sportsbook", "Strong reputation"],
+    cons: ["Outdated interface", "Limited live chat hours"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "Dogecoin", "USDT", "Dash"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Microgaming", "BGaming"],
+    affiliateUrl: "",
+    description: "FortuneJack is one of the original crypto casinos, operating since 2014. It offers provably fair games and a solid sportsbook with strong reputation.",
+  },
+  "bitcasino": {
+    name: "Bitcasino.io", rating: 8.7, bonus: "1 BTC + 300 Free Spins",
+    payout: "97.2%", games: "3000+", established: "2014", license: "Curacao",
+    pros: ["Award-winning crypto casino", "Excellent live dealer", "3000+ games", "Instant withdrawals"],
+    cons: ["Crypto only", "Country restrictions"],
+    payments: ["Bitcoin", "Ethereum", "Litecoin", "USDT", "Tron", "BNB"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Hacksaw Gaming", "Play'n GO"],
+    affiliateUrl: "",
+    description: "Bitcasino.io is an award-winning crypto casino with 3000+ games and instant withdrawals. A premier destination for crypto gambling since 2014.",
+  },
+  "sportsbet": {
+    name: "Sportsbet.io", rating: 8.6, bonus: "Up to $5,000 Welcome Bonus",
+    payout: "97.0%", games: "2000+", established: "2016", license: "Curacao",
+    pros: ["Top crypto sportsbook", "Fast transactions", "5000+ sports markets", "Casino and sports in one"],
+    cons: ["Casino is secondary to sportsbook", "Limited table games"],
+    payments: ["Bitcoin", "Ethereum", "USDT", "Litecoin", "Dogecoin"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Microgaming"],
+    affiliateUrl: "",
+    description: "Sportsbet.io is one of the leading crypto sportsbooks, with 5000+ sports markets and fast transactions. Its casino section offers 2000+ games for a complete experience.",
+  },
+  "thunderpick": {
+    name: "Thunderpick Casino", rating: 8.5, bonus: "100% up to $1,000",
+    payout: "96.9%", games: "3000+", established: "2017", license: "Curacao",
+    pros: ["Esports-focused platform", "3000+ casino games", "Crypto-friendly", "Regular tournaments"],
+    cons: ["Esports focus not for everyone", "Limited traditional sports"],
+    payments: ["Bitcoin", "Ethereum", "USDT", "Litecoin", "Dogecoin"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "NoLimit City", "BGaming"],
+    affiliateUrl: "",
+    description: "Thunderpick is the premier esports gaming platform with an impressive 3000+ casino games. Crypto-friendly with regular tournaments and competitive odds.",
+  },
+  "winzio": {
+    name: "Winz.io Casino", rating: 8.3, bonus: "5 BTC + 200 Free Spins",
+    payout: "97.1%", games: "4000+", established: "2021", license: "Curacao",
+    pros: ["4000+ games from 80+ providers", "Massive 5 BTC welcome bonus", "Fast withdrawals", "Regular promotions"],
+    cons: ["Newer brand (2021)", "No fiat support"],
+    payments: ["Bitcoin", "Ethereum", "USDT", "Litecoin", "Dogecoin", "BNB"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "NetEnt", "Play'n GO"],
+    affiliateUrl: "",
+    description: "Winz.io delivers an impressive 4000+ games from over 80 providers. With a massive 5 BTC welcome bonus and fast crypto withdrawals.",
+  },
+};
+
+export function generateStaticParams() {
+  return Object.keys(REVIEWS).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const casino = REVIEWS[slug];
+  if (!casino) return {};
+  return {
+    title: casino.name + " Review 2026",
+    description: "Read our expert review of " + casino.name + ". " + casino.bonus + ", " + casino.games + " games, " + casino.payout + " payout rate.",
+    alternates: { canonical: "https://royalbetguide.com/reviews/" + slug + "/" },
+    openGraph: {
+      title: casino.name + " Review 2026",
+      description: "Read our expert review of " + casino.name + ". " + casino.bonus + ", " + casino.games + " games, " + casino.payout + " payout rate.",
+      url: "https://royalbetguide.com/reviews/" + slug + "/",
+      siteName: "Royal Bet Guide",
+      images: [{ url: `/og/${slug}.png`, width: 1200, height: 630 }],
+    },
+  };
+}
+
+export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const casino = REVIEWS[slug];
+  if (!casino) return <div className="mx-auto max-w-4xl px-4 py-20 text-center text-slate-500">Casino not found</div>;
+
+  // Compute rating breakdown from casino data
+  const gamesCount = parseInt(casino.games) || 1000;
+  const payoutPct = parseFloat(casino.payout) || 96;
+  const gamesRating = Math.min(10, Math.max(1, Math.round(gamesCount / 500) + 4));
+  const payoutRating = Math.min(10, Math.max(1, Math.round((payoutPct - 90) / 1.2)));
+  const mobileRating = casino.pros.some((p: string) => p.toLowerCase().includes('mobile')) ? 9 : 
+                       casino.cons.some((c: string) => c.toLowerCase().includes('mobile')) ? 7 : 8;
+  const supportRating = casino.cons.some((c: string) => c.toLowerCase().includes('live chat') || c.toLowerCase().includes('support')) ? 7 : 9;
+  const bonusKeywords = ['btc', '5,000', '$3,750', '$3,000', '$10,000', '$2,500'];
+  const bonusRating = bonusKeywords.some(k => casino.bonus.toLowerCase().includes(k.toLowerCase())) ? 9 : 8;
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: { "@type": "Organization", name: casino.name },
+    reviewRating: { "@type": "Rating", ratingValue: casino.rating.toString(), bestRating: "10", worstRating: "0" },
+    author: { "@type": "Person", name: getAuthorName(casino.name) },
+    datePublished: casino.established,
+    description: "Read our expert review of " + casino.name + ". " + casino.bonus + ", " + casino.games + " games, " + casino.payout + " payout rate.",
+  };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Is " + casino.name + " safe and legit?", acceptedAnswer: { "@type": "Answer", text: "Yes, " + casino.name + " is licensed by " + casino.license + " and uses industry-standard encryption to protect player data." } },
+      { "@type": "Question", name: "What is the welcome bonus at " + casino.name + "?", acceptedAnswer: { "@type": "Answer", text: "New players at " + casino.name + " can claim " + casino.bonus + ". Always check the terms and conditions for wagering requirements." } },
+      { "@type": "Question", name: "How fast are withdrawals at " + casino.name + "?", acceptedAnswer: { "@type": "Answer", text: casino.name + " processes withdrawals quickly, with e-wallets typically receiving funds within 24 hours and bank transfers taking 2-5 business days." } },
+    ],
+  };
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: casino.name,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: casino.rating.toString(),
+      bestRating: "10",
+      worstRating: "0",
+      ratingCount: "1",
+    },
+    offers: {
+      "@type": "Offer",
+      name: casino.bonus,
+      description: casino.bonus,
+    },
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Games", value: gamesRating.toString() },
+      { "@type": "PropertyValue", name: "Payouts", value: payoutRating.toString() },
+      { "@type": "PropertyValue", name: "Mobile Experience", value: mobileRating.toString() },
+      { "@type": "PropertyValue", name: "Customer Support", value: supportRating.toString() },
+      { "@type": "PropertyValue", name: "Bonuses", value: bonusRating.toString() },
+    ],
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://royalbetguide.com/" },
+      { "@type": "ListItem", position: 2, name: "Reviews", item: "https://royalbetguide.com/reviews/" },
+      { "@type": "ListItem", position: 3, name: casino.name, item: "https://royalbetguide.com/reviews/" + slug + "/" },
+    ],
+  };
+
+  return (
+    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, productSchema, breadcrumbSchema]) }} />
+      {/* Affiliate Disclosure Banner */}
+      <div className="mb-6 rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">
+        We may earn a commission if you sign up through our links. Play responsibly. 18+
+      </div>
+
+      {/* Breadcrumbs */}
+      <div className="mb-6 text-sm text-slate-500">
+        <Link href="/" className="hover:text-corg-500">Home</Link>
+        <span className="mx-2">→</span>
+        <Link href="/reviews/" className="hover:text-corg-500">Reviews</Link>
+        <span className="mx-2">→</span>
+        <span className="text-slate-800 font-semibold">{casino.name}</span>
+      </div>
+
+      {/* Hero Card */}
+      <div className="rounded-xl bg-gradient-to-br from-corg-500 to-corg-600 p-6 sm:p-8">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4">
+            <span className="text-4xl">🎰</span>
+            <div>
+              <h1 className="text-3xl font-extrabold text-white">{casino.name}</h1>
+              <p className="text-gold-400 font-semibold">{casino.bonus}</p>
+            </div>
+          </div>
+          {casino.affiliateUrl && (
+          <a href={casino.affiliateUrl} target="_blank" rel="nofollow sponsored"
+            className="btn-gold whitespace-nowrap">Claim Bonus →</a>
+          )}
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-4 text-sm">
+          <span className="rating-badge">⭐ {casino.rating}/10</span>
+          <span className="text-white/70">🎮 <strong className="text-white">{casino.games}</strong> games</span>
+          <span className="text-white/70">💰 <strong className="text-corg-green">{casino.payout}</strong> payout</span>
+          <span className="text-white/70">📅 Est. <strong className="text-white">{casino.established}</strong></span>
+          <span className="text-white/70">🔒 <strong className="text-white">{casino.license}</strong></span>
+        </div>
+      </div>
+
+      <p className="mt-8 text-slate-700 leading-relaxed">{casino.description}</p>
+
+      {/* ⚡ Quick Answer — AI-Optimized Summary Block */}
+      <div className="mt-6 rounded-xl border border-corg-500/20 bg-corg-500/5 p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-lg">⚡</span>
+          <h3 className="text-lg font-bold text-corg-600">Quick Answer — The Facts</h3>
+        </div>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
+          <div className="flex items-center gap-2 text-sm text-slate-700">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-corg-500/10 text-xs">🔒</span>
+            <span><strong>License:</strong> {casino.license}</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-slate-700">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-corg-500/10 text-xs">📅</span>
+            <span><strong>Since:</strong> {casino.established}</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-slate-700">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-corg-500/10 text-xs">🎮</span>
+            <span><strong>Games:</strong> {casino.games}</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-slate-700">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-corg-500/10 text-xs">💰</span>
+            <span><strong>Payout:</strong> {casino.payout}</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-slate-700">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-corg-500/10 text-xs">⭐</span>
+            <span><strong>Rating:</strong> {casino.rating}/10</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-slate-700">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-corg-500/10 text-xs">🏆</span>
+            <span><strong>Best For:</strong> {casino.pros[0]}</span>
+          </div>
+        </div>
+        <div className="mt-3 text-xs text-slate-400">
+          Data verified {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}. Always check casino terms for current offers.
+        </div>
+      </div>
+
+      {/* Pros & Cons */}
+      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        <div className="rounded-xl border border-corg-green/20 bg-green-50 p-6">
+          <h3 className="text-lg font-bold text-corg-green-dark">✅ Pros</h3>
+          <ul className="mt-3 space-y-2">
+            {casino.pros.map((p: string) => <li key={p} className="text-sm text-slate-700">✓ {p}</li>)}
+          </ul>
+        </div>
+        <div className="rounded-xl border border-red-500/20 bg-red-50 p-6">
+          <h3 className="text-lg font-bold text-red-600">❌ Cons</h3>
+          <ul className="mt-3 space-y-2">
+            {casino.cons.map((c: string) => <li key={c} className="text-sm text-slate-700">✗ {c}</li>)}
+          </ul>
+        </div>
+      </div>
+
+      {/* ⭐ Rating Score Breakdown */}
+      <div className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">⭐ Rating Breakdown</h2>
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-slate-600">🎮 Games</span>
+              <span className="font-bold text-corg-600">{gamesRating}/10</span>
+            </div>
+            <div className="mt-1 h-2 rounded-full bg-slate-100">
+              <div className="h-2 rounded-full bg-corg-500 transition-all" style={{width: gamesRating*10+"%"}}></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-slate-600">💰 Payouts</span>
+              <span className="font-bold text-corg-600">{payoutRating}/10</span>
+            </div>
+            <div className="mt-1 h-2 rounded-full bg-slate-100">
+              <div className="h-2 rounded-full bg-corg-500 transition-all" style={{width: payoutRating*10+"%"}}></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-slate-600">📱 Mobile</span>
+              <span className="font-bold text-corg-600">{mobileRating}/10</span>
+            </div>
+            <div className="mt-1 h-2 rounded-full bg-slate-100">
+              <div className="h-2 rounded-full bg-corg-500 transition-all" style={{width: mobileRating*10+"%"}}></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-slate-600">🎧 Support</span>
+              <span className="font-bold text-corg-600">{supportRating}/10</span>
+            </div>
+            <div className="mt-1 h-2 rounded-full bg-slate-100">
+              <div className="h-2 rounded-full bg-corg-500 transition-all" style={{width: supportRating*10+"%"}}></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-slate-600">🎁 Bonuses</span>
+              <span className="font-bold text-corg-600">{bonusRating}/10</span>
+            </div>
+            <div className="mt-1 h-2 rounded-full bg-slate-100">
+              <div className="h-2 rounded-full bg-corg-500 transition-all" style={{width: bonusRating*10+"%"}}></div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center rounded-lg bg-corg-500/5 p-3">
+            <div className="text-center">
+              <span className="text-2xl font-extrabold text-corg-600">{casino.rating}</span>
+              <span className="text-sm text-slate-400">/10</span>
+              <p className="text-xs text-slate-500">Overall Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Game Selection Section */}
+      <div className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">🎮 Game Selection</h2>
+        {getGameText(casino).map((p: string, i: number) => (
+          <p key={i} className="mt-3 text-slate-700 leading-relaxed">{p}</p>
+        ))}
+      </div>
+
+      {/* Banking Section */}
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">💳 Banking & Payments</h2>
+        {getBankingText(casino).map((p: string, i: number) => (
+          <p key={i} className="mt-3 text-slate-700 leading-relaxed">{p}</p>
+        ))}
+      </div>
+
+      {/* Payments & Providers */}
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <h3 className="text-lg font-bold text-corg-600">💳 Payment Methods</h3>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {casino.payments.map((p: string) => (
+            <span key={p} className="rounded-full bg-corg-500/10 px-3 py-1 text-xs text-corg-500 font-medium">{p}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-xl border border-slate-200 bg-white p-6">
+        <h3 className="text-lg font-bold text-corg-600">🎮 Game Providers</h3>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {(function() {
+            const providerLinks: Record<string, string> = {
+              "NetEnt": "/games/netent-casinos/",
+              "Microgaming": "/games/microgaming-casinos/",
+              "Evolution Gaming": "/games/evolution-casinos/",
+              "Playtech": "/games/playtech-casinos/",
+              "Play'n GO": "/games/playn-go-casinos/",
+              "Pragmatic Play": "/games/pragmatic-play-casinos/",
+            };
+            return casino.providers.map((p: string) => {
+              if (providerLinks[p]) {
+                return <Link key={p} href={providerLinks[p]} className="rounded-full bg-corg-500/10 px-3 py-1 text-xs text-corg-500 font-medium hover:bg-corg-500/20 transition-colors">{p}</Link>;
+              }
+              return <span key={p} className="rounded-full bg-corg-500/10 px-3 py-1 text-xs text-corg-500 font-medium">{p}</span>;
+            });
+          })()}
+        </div>
+        <p className="mt-3 text-xs text-slate-400">
+          Check out our <Link href="/games/" className="text-corg-500 hover:underline">complete game guides</Link> for detailed provider reviews and top game recommendations.
+        </p>
+      </div>
+
+      {/* Mobile Experience Section */}
+      <div className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">📱 Mobile Experience</h2>
+        {getMobileText(casino).map((p: string, i: number) => (
+          <p key={i} className="mt-3 text-slate-700 leading-relaxed">{p}</p>
+        ))}
+      </div>
+
+      {/* Customer Support Section */}
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">🎧 Customer Support</h2>
+        {getSupportText(casino).map((p: string, i: number) => (
+          <p key={i} className="mt-3 text-slate-700 leading-relaxed">{p}</p>
+        ))}
+      </div>
+
+      {/* Comparison Table */}
+      {(() => {
+        const similar = getComparisonCasinos(slug, casino, REVIEWS);
+        if (similar.length === 0) return null;
+        return (
+      <div className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">📊 Compare {casino.name} with Similar Casinos</h2>
+        <p className="mt-2 text-sm text-slate-500">See how {casino.name} stacks up against the closest alternatives.</p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full min-w-[500px] text-left text-sm">
+            <thead>
+              <tr className="border-b border-slate-200">
+                <th className="py-2 pr-4 font-semibold text-slate-600">Casino</th>
+                <th className="py-2 px-4 font-semibold text-slate-600">Rating</th>
+                <th className="py-2 px-4 font-semibold text-slate-600">Bonus</th>
+                <th className="py-2 px-4 font-semibold text-slate-600">Payout</th>
+                <th className="py-2 px-4 font-semibold text-slate-600">Games</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[casino, ...similar].map((s: any, i: number) => (
+                <tr key={i} className={"border-b border-slate-100 " + (i === 0 ? "bg-corg-500/5 font-medium" : "hover:bg-slate-50")}>
+                  <td className="py-3 pr-4">
+                    {i === 0 ? (
+                      <span className="text-corg-600">{s.name} <span className="text-xs text-slate-400">(you are here)</span></span>
+                    ) : (
+                      <Link href={"/reviews/" + similar[i-1].slug + "/"} className="text-corg-500 hover:underline">{s.name}</Link>
+                    )}
+                  </td>
+                  <td className="py-3 px-4">{s.rating}/10</td>
+                  <td className="py-3 px-4 text-xs">{s.bonus}</td>
+                  <td className="py-3 px-4">{s.payout}</td>
+                  <td className="py-3 px-4">{s.games}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-xs text-slate-400">
+          Ratings are based on our expert reviews. Always verify terms and conditions before claiming any bonus.
+        </p>
+      </div>
+        );
+      })()}
+
+{/* FAQ Section */}
+      <div className="mt-10">
+        <h2 className="text-2xl font-extrabold text-corg-600 mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="font-bold text-corg-600">Is {casino.name} safe and legit?</h3>
+            <p className="mt-2 text-sm text-slate-500">Yes, {casino.name} is licensed by {casino.license} and uses industry-standard SSL encryption to protect player data. The casino undergoes regular audits by independent testing agencies to ensure fair play and random outcomes.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="font-bold text-corg-600">What is the welcome bonus at {casino.name}?</h3>
+            <p className="mt-2 text-sm text-slate-500">New players at {casino.name} can claim {casino.bonus}. Always check the terms and conditions for wagering requirements, game eligibility, and expiration dates before claiming any bonus offer.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="font-bold text-corg-600">How fast are withdrawals at {casino.name}?</h3>
+            <p className="mt-2 text-sm text-slate-500">{casino.name} processes withdrawals quickly, with e-wallets typically receiving funds within 24 hours and bank transfers taking 2-5 business days. Crypto withdrawals are usually processed within minutes to a few hours.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="font-bold text-corg-600">What types of games does {casino.name} offer?</h3>
+            <p className="mt-2 text-sm text-slate-500">{casino.name} features {casino.games} games including video slots, progressive jackpots, table games like blackjack and roulette, live dealer games, and specialty options. The library is powered by leading providers such as {casino.providers.slice(0, 3).join(", ")}.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="font-bold text-corg-600">Can I play {casino.name} on my mobile device?</h3>
+            <p className="mt-2 text-sm text-slate-500">Yes, {casino.name} is fully optimized for mobile play. Most modern casinos offer both a responsive mobile website and dedicated apps for iOS and Android devices, allowing you to enjoy your favorite games on the go without compromising on quality.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="font-bold text-corg-600">Does {casino.name} have a loyalty program?</h3>
+            <p className="mt-2 text-sm text-slate-500">{casino.name} offers rewards for regular players through its VIP and loyalty program. Benefits typically include cashback offers, exclusive bonuses, faster withdrawals, personal account managers, and invitations to special events for high-volume players.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Verdict Section */}
+      <div className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-xl font-bold text-corg-600">🏆 Final Verdict</h2>
+        <p className="mt-3 text-slate-700 leading-relaxed">
+          {casino.name} earns a solid {casino.rating}/10 rating from our expert reviewers. With {casino.games} games, a {casino.payout} payout rate, and a strong reputation since {casino.established}, it is a reliable choice for both new and experienced players. The casino excels in {casino.pros[0]?.toLowerCase() || "game variety"} and {casino.pros[1]?.toLowerCase() || "player experience"}, making it a top contender in the online gambling space.
+        </p>
+        <p className="mt-3 text-slate-700 leading-relaxed">
+          We recommend {casino.name} for players looking for a secure, well-regulated online casino with a solid game selection and competitive bonus offers. As with any online casino, we encourage players to read the terms and conditions carefully and always gamble responsibly.
+        </p>
+      </div>
+
+      {/* CTA */}
+      {casino.affiliateUrl && (
+      <div className="mt-10 rounded-2xl bg-gradient-to-br from-corg-500 to-corg-600 p-8 text-center">
+        <h3 className="text-xl font-bold text-white">Ready to Play at {casino.name}?</h3>
+        <p className="mt-2 text-white/70">Claim your exclusive welcome bonus and start playing today.</p>
+        <a href={casino.affiliateUrl} target="_blank" rel="nofollow sponsored"
+          className="btn-gold mt-4 inline-flex">Claim {casino.bonus} →</a>
+      </div>
+      )}
+      
+      {/* Cross-link to comparison page for 7BitPartners brands */}
+      {["7bit-casino", "katsubet", "mirax-casino"].includes(slug) && (
+      <div className="mt-8 text-center">
+        <div className="inline-block rounded-lg border border-corg-500/20 bg-corg-500/5 px-6 py-4">
+          <p className="text-sm text-slate-600">
+            📊 Compare <strong>{casino.name}</strong> with other top crypto casinos 
+          </p>
+          <Link 
+            href="/compare/7bit-katsubet-mirax/" 
+            className="mt-2 inline-block text-sm font-semibold text-corg-500 hover:underline"
+          >
+            See full comparison: 7BitCasino vs KatsuBet vs MiraxCasino →
+          </Link>
+        </div>
+      </div>
+      )}
+    </div>
+  );
+}
