@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Play Craps 2026 — Rules, Bets & Odds Guide | Royal Bet Guide",
+  title: "How to Play Craps 2026 — Rules, Bets & Odds Guide",
   description: "Learn how to play craps in 2026. Complete guide covering the come-out roll, pass line, don't pass, come bets, free odds (0% house edge!), place bets, and proposition bets to avoid.",
   alternates: { canonical: "https://royalbetguide.com/guides/craps/how-to-play/" },
 };

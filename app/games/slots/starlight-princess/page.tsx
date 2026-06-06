@@ -2,7 +2,7 @@ import Link from "next/link";
 import GameDemoEmbed from "@/components/GameDemoEmbed";
 
 export const metadata = {
-  title: "Starlight Princess Slot 2026 — Anime Slot 5,000x Max Win | Royal Bet Guide",
+  title: "Starlight Princess Slot 2026 — Anime Slot 5,000x Max Win",
   description: "Complete Starlight Princess slot review by Pragmatic Play. RTP 96.5%, very high volatility, tumbling reels with increasing multipliers, max win 5,000x. Find the best casinos to play.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/starlight-princess/",

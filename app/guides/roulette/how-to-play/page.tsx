@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Play Roulette 2026 — Rules, Bets & Wheel Guide | Royal Bet Guide",
+  title: "How to Play Roulette 2026 — Rules, Bets & Wheel Guide",
   description: "Learn how to play roulette in 2026. Complete guide covering rules, inside and outside bets, European vs American roulette differences, RTP, and wheel mechanics.",
   alternates: { canonical: "https://royalbetguide.com/guides/roulette/how-to-play/" },
 };

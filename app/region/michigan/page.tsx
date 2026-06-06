@@ -22,6 +22,10 @@ export default function MichiganPage() {
         </p>
       </div>
 
+      <div className="mb-8 rounded-lg border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-center text-sm text-amber-800">
+        <strong>⚠️ MI Only:</strong> The casinos listed on this page are only available to players physically located within Michigan state borders. You must be 21+ and within MI to play.
+      </div>
+
       <div className="card-light mb-8">
         <p className="text-slate-700 leading-relaxed">
           Michigan legalized online casino gaming in 2021, becoming one of the

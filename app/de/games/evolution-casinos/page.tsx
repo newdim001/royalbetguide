@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Evolution Gaming Casinos 2026 – Live Casino Guide | Royal Bet Guide",
+  title: "Evolution Gaming Casinos 2026 – Live Casino Guide",
   description: "Die besten Evolution Gaming Casinos 2026. Lightning Roulette, Crazy Time und Monopoly Live – Live-Dealer-Spiele auf Deutsch.",
   alternates: { canonical: "https://royalbetguide.com/de/games/evolution-casinos/" },
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Die h&ouml;chsten RTP Slots 2026 – Top 10 mit bester Auszahlungsrate | Royal Bet Guide",
+  title: "Die h&ouml;chsten RTP Slots 2026 – Top 10 mit bester Auszahlungsrate",
   description:
     "Die h&ouml;chsten RTP Slots 2026 im &Uuml;berblick: Starburst, Book of Dead, Gates of Olympus und mehr. RTP-Raten bis 99 %. Inklusive Spieltipps und Casino-Empfehlungen.",
   alternates: { canonical: "https://royalbetguide.com/de/blog/hoechste-rtp-slots-2026/" },

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Online Slots 2026 - Beliebteste Spielautomaten in Deutschland | Royal Bet Guide",
+  title: "Online Slots 2026 - Beliebteste Spielautomaten in Deutschland",
   description:
     "Die beliebtesten Online Slots 2026 in Deutschland. Top 10 Spielautomaten mit RTP, Anbieter und Volatilität. Jetzt bei 7BitCasino spielen und exklusive Boni sichern!",
   alternates: { canonical: "https://royalbetguide.com/de/games/slots/" },

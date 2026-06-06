@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Play Poker (Texas Hold&apos;em) 2026 — Rules, Hand Rankings & Strategy | Royal Bet Guide",
+  title: "How to Play Poker (Texas Hold&apos;em) 2026 — Rules, Hand Rankings & Strategy",
   description: "Learn how to play Texas Hold&apos;em poker in 2026. Complete guide covering hand rankings, betting rounds, position importance, starting hand selection, community cards, and pot odds basics.",
   alternates: { canonical: "https://royalbetguide.com/guides/poker/how-to-play/" },
 };

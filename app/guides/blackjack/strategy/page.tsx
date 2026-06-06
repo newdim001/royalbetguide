@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Blackjack Strategy 2026 — Basic Strategy Chart & Tips to Win | Royal Bet Guide",
+  title: "Blackjack Strategy 2026 — Basic Strategy Chart & Tips to Win",
   description: "Master blackjack basic strategy in 2026. Complete guide with strategy charts, house edge explained, and tips to reduce the casino advantage to 0.5%. Find the best casinos to play.",
   alternates: { canonical: "https://royalbetguide.com/guides/blackjack/strategy/" },
 };

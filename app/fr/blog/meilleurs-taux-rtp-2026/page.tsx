@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meilleurs Taux de RTP 2026 – Top 10 des Slots avec le Meilleur Taux de Paiement | Royal Bet Guide",
+  title: "Meilleurs Taux de RTP 2026 – Top 10 des Slots avec le Meilleur Taux de Paiement",
   description:
     "Les meilleurs taux de RTP 2026 en un coup d'oeil: Starburst, Book of Dead, Gates of Olympus et plus. Taux RTP jusqu'a 99%. Avec conseils de jeu et recommandations de casinos.",
   alternates: { canonical: "https://royalbetguide.com/fr/blog/meilleurs-taux-rtp-2026/" },

@@ -13,7 +13,7 @@ const FEATURED_CASINOS = [
   { name: "Ruby Fortune", bonus: "$750 Welcome Bonus", rating: 9.1, slug: "ruby-fortune-casino", imgSlug: "ruby-fortune" },
   { name: "LeoVegas", bonus: "$1,000 + 200 FS", rating: 9.4, slug: "leovegas", imgSlug: "leovegas" },
   { name: "Stake", bonus: "Crypto Welcome Bonus", rating: 8.8, slug: "stake", imgSlug: "stake" },
-  { name: "BC.Game", bonus: "Up to $20,000 + 200 FS", rating: 9.3, slug: "bc-game", imgSlug: "bc-game" },
+  { name: "BC.Game", bonus: "Up to $200K + 500 FS", rating: 9.4, slug: "bc-game", imgSlug: "bc-game" },
 ];
 
 const GAME_CATEGORIES = [
@@ -32,8 +32,11 @@ export default function HomePage() {
     <div>
       {/* Affiliate Disclosure Banner */}
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">
-          We may earn a commission if you sign up through our links. Play responsibly. 18+
+        <div className="rounded-lg border border-gold-400/30 bg-gold-400/10 px-5 py-3 text-center text-xs text-slate-600">
+          Royal Bet Guide is an <strong>independent review site</strong>. We may earn commissions through affiliate links. 
+          Our reviews are based on expert analysis, not financial incentives. 
+          We are <strong>not affiliated</strong> with RoyalBet, RoyalBet.top, or any casino operator. 
+          Play responsibly. 18+
         </div>
       </div>
 
@@ -65,7 +68,7 @@ export default function HomePage() {
 
           <div className="mt-4 flex items-center justify-center gap-2 text-sm text-white/70">
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold-400/20 text-xs text-gold-400">✓</span>
-            Launched 2026
+            Independently Reviewed • Expert Casino Reviews
           </div>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -81,7 +84,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">
-            ★ Top Rated 2026
+            Expert Reviewed
           </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-corg-600 sm:text-4xl">
             Best Online Casinos
@@ -118,7 +121,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link href="/reviews/" className="btn-outline inline-flex">View All 51 Casino Reviews →</Link>
+          <Link href="/reviews/" className="btn-outline inline-flex">View All Casino Reviews →</Link>
         </div>
       </section>
 
@@ -130,12 +133,12 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">
-            ★ Free to Play 2026
+            Free to Play
           </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-corg-600 sm:text-4xl">
             Sweepstakes <span className="text-corg-500">Casinos</span>
           </h2>
-          <p className="mt-2 text-slate-500">Play for free and win real cash prizes — no purchase necessary</p>
+          <p className="mt-2 text-slate-500">Sweepstakes model casinos — play with virtual currencies, redeem winnings for cash prizes. No purchase necessary.</p>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
@@ -209,7 +212,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link href="/sweepstakes-casinos/" className="btn-outline inline-flex">View All 8 Sweepstakes Casinos →</Link>
+          <Link href="/sweepstakes-casinos/" className="btn-outline inline-flex">View All Sweepstakes Casinos →</Link>
         </div>
       </section>
 
@@ -278,7 +281,7 @@ export default function HomePage() {
             Ready to <span className="text-gold-400">Play</span>?
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-white/70">
-            Join thousands of winning players. Get exclusive bonuses and expert tips.
+            Find your perfect casino with our expert reviews. Compare bonuses, read guides, and play smarter.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="/reviews/" className="btn-gold">Find Your Casino →</Link>
@@ -288,40 +291,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Featured — 7BitPartners Casinos */}
-      <section className="rounded-xl bg-gradient-to-br from-corg-500 to-corg-600 p-8 text-center">
-        <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white">Sponsored</span>
-        <h2 className="mt-4 text-2xl font-extrabold text-white">
-          🔥 Our Top-Rated Crypto Casinos
-        </h2>
-        <p className="mx-auto mt-2 max-w-xl text-sm text-white/70">
-          We have partnered with 7BitPartners to bring you exclusive bonuses at three premium crypto casinos.
-          Claim your welcome package today.
-        </p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-lg bg-white/10 p-4 text-white">
-            <h3 className="font-bold">7BitCasino</h3>
-            <p className="mt-1 text-xs text-white/60">Since 2014 • 7,000+ games</p>
-            <p className="mt-2 text-lg font-bold text-gold-400">5 BTC + 250 FS</p>
-            <a href="https://7bit.partners/p2jvy2mdh" target="_blank" rel="nofollow sponsored"
-              className="btn-gold mt-3 inline-flex text-sm">Claim Bonus →</a>
-          </div>
-          <div className="rounded-lg bg-white/10 p-4 text-white">
-            <h3 className="font-bold">KatsuBet</h3>
-            <p className="mt-1 text-xs text-white/60">Since 2020 • 7,000+ games</p>
-            <p className="mt-2 text-lg font-bold text-gold-400">325% + 200 FS</p>
-            <a href="https://katsubet.partners/px4e6itoe" target="_blank" rel="nofollow sponsored"
-              className="btn-gold mt-3 inline-flex text-sm">Claim Bonus →</a>
-          </div>
-          <div className="rounded-lg bg-white/10 p-4 text-white">
-            <h3 className="font-bold">MiraxCasino</h3>
-            <p className="mt-1 text-xs text-white/60">Since 2021 • 5,000+ games</p>
-            <p className="mt-2 text-lg font-bold text-gold-400">$500 + 200 FS</p>
-            <a href="https://mirax.partners/pyklyuxbk" target="_blank" rel="nofollow sponsored"
-              className="btn-gold mt-3 inline-flex text-sm">Claim Bonus →</a>
-          </div>
-        </div>
 
         {/* Regional Guides */}
         <div className="card-light mb-8">
@@ -356,7 +325,34 @@ export default function HomePage() {
           className="mt-4 inline-block text-sm text-white/60 hover:text-white underline">
           Compare all three →
         </Link>
-      </section>
+
+        {/* Featured Partners — lower prominence */}
+        <div className="mt-10 rounded-xl border border-corg-500/20 bg-white/5 p-6 text-center">
+          <p className="text-xs text-white/40 uppercase tracking-wider mb-3">Advertising</p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            <div className="rounded-lg bg-white/10 p-4 text-white">
+              <h3 className="font-bold text-sm">7BitCasino</h3>
+              <p className="mt-1 text-xs text-white/60">Since 2014 • 7,000+ games</p>
+              <p className="mt-2 text-sm font-bold text-gold-400">5 BTC + 250 FS</p>
+              <a href="/go/7bit-casino/" target="_blank" rel="nofollow sponsored"
+                className="btn-gold mt-2 inline-flex text-xs">Claim Bonus →</a>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4 text-white">
+              <h3 className="font-bold text-sm">KatsuBet</h3>
+              <p className="mt-1 text-xs text-white/60">Since 2020 • 7,000+ games</p>
+              <p className="mt-2 text-sm font-bold text-gold-400">325% + 200 FS</p>
+              <a href="/go/katsubet/" target="_blank" rel="nofollow sponsored"
+                className="btn-gold mt-2 inline-flex text-xs">Claim Bonus →</a>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4 text-white">
+              <h3 className="font-bold text-sm">MiraxCasino</h3>
+              <p className="mt-1 text-xs text-white/60">Since 2021 • 5,000+ games</p>
+              <p className="mt-2 text-sm font-bold text-gold-400">$500 + 200 FS</p>
+              <a href="/go/mirax-casino/" target="_blank" rel="nofollow sponsored"
+                className="btn-gold mt-2 inline-flex text-xs">Claim Bonus →</a>
+            </div>
+          </div>
+        </div>
 
     </div>
   );

@@ -112,11 +112,12 @@ export default function MiraxCasinoFrPage() {
       },
     ],
   };
-  const productSchema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Organization",
     name: c.name,
     description: "Test MiraxCasino 2026 – " + c.bonus + ", " + c.games + " jeux, " + c.payout + " taux de paiement.",
+    image: "https://royalbetguide.com/og/mirax-casino.png",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: c.rating.toString(),
@@ -124,7 +125,7 @@ export default function MiraxCasinoFrPage() {
       worstRating: "0",
       ratingCount: "1",
     },
-    offers: { "@type": "Offer", name: c.bonus, description: "Pack de bienvenue: " + c.bonus },
+    
     additionalProperty: [
       { "@type": "PropertyValue", name: "Jeux", value: gamesRating.toString() },
       { "@type": "PropertyValue", name: "Paiements", value: payoutRating.toString() },
@@ -145,7 +146,7 @@ export default function MiraxCasinoFrPage() {
   };
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, productSchema, breadcrumbSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, organizationSchema, breadcrumbSchema]) }} />
 
       <div className="mb-6 rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">
         Nous pouvons percevoir une commission si vous vous inscrivez via nos liens. Jouez de maniere responsable. 18+

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Online Glücksspiel Trends 2026 – Mobile und Krypto-Boom | Royal Bet Guide",
+  title: "Online Glücksspiel Trends 2026 – Mobile und Krypto-Boom",
   description: "Die wichtigsten Online Glücksspiel Trends 2026: Mobile Gaming, Krypto-Adoption, Live-Casino-Boom und mehr.",
   alternates: { canonical: "https://royalbetguide.com/de/news/online-gluecksspiel-trends-2026/" },
 };

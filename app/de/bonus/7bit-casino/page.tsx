@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "7BitCasino Bonus 2026 - 5 BTC + 250 Freispiele sichern | Royal Bet Guide",
+  title: "7BitCasino Bonus 2026 - 5 BTC + 250 Freispiele sichern",
   description:
     "7BitCasino Bonus 2026: Sichere Dir 5 BTC + 250 Freispiele als Willkommenspaket. Umsatzbedingungen, Bonus-Code und Schritt-für-Schritt-Anleitung – Jetzt exklusiv sichern!",
   alternates: { canonical: "https://royalbetguide.com/de/bonus/7bit-casino/" },
@@ -19,17 +19,12 @@ const AFFILIATE_URL = "https://7bit.partners/p2jvy2mdh";
 export default function SevenBitBonusDePage() {
   const bonusSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Organization",
     name: "7BitCasino Willkommensbonus 2026",
+    image: "https://royalbetguide.com/og/7bit-casino.png",
     description:
       "5 BTC + 250 Freispiele Willkommenspaket bei 7BitCasino",
-    offers: {
-      "@type": "Offer",
-      name: "5 BTC + 250 Freispiele",
-      description:
-        "Verteilt auf die ersten Einzahlungen. 40-fache Umsatzbedingung. Nur für Neukunden. 18+",
-      url: AFFILIATE_URL,
-    },
+    
   };
 
   return (

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Migliori Casino Bitcoin 2026 \u2013 Top Crypto Casinos a Confronto | Royal Bet Guide",
+  title: "Migliori Casino Bitcoin 2026 \u2013 Top Crypto Casinos a Confronto",
   description:
     "I migliori Bitcoin casino 2026 a confronto. 7BitCasino, KatsuBet e MiraxCasino testati dagli esperti. Bonus esclusivi, prelievi rapidi, Provably Fair.",
   alternates: { canonical: "https://royalbetguide.com/it/blog/migliori-casino-bitcoin-2026/" },

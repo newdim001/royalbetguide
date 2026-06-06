@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Krypto-Regulierung 2026 – Was Spieler Wissen Müssen | Royal Bet Guide",
+  title: "Krypto-Regulierung 2026 – Was Spieler Wissen Müssen",
   description: "EU-Krypto-Regulierung 2026: MiCA, AML, KYC – Was deutsche Spieler über Krypto-Casinos wissen müssen.",
   alternates: { canonical: "https://royalbetguide.com/de/news/krypto-regulierung-2026/" },
   openGraph: {

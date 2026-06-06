@@ -56,6 +56,10 @@ export default function NewJerseySportsbooksPage() {
           <p className="mt-1 text-sm text-slate-400">By Michael Thompson - Updated June 2026</p>
         </div>
 
+        <div className="mb-8 rounded-lg border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-center text-sm text-amber-800">
+          <strong>⚠️ NJ Only:</strong> You must be 21+ and physically located within New Jersey to use these sportsbooks. Geolocation verification is required.
+        </div>
+
         <div className="card-light mb-8">
           <p className="text-slate-700 leading-relaxed">New Jersey has been at the forefront of US sports betting since the landmark <strong>Murphy v. NCAA</strong> Supreme Court ruling in May 2018 struck down PASPA. The Garden State launched legal sports betting in June 2018 and has since become the gold standard for regulated US sportsbooks.</p>
           <p className="mt-3 text-slate-700 leading-relaxed">All sportsbooks operating in New Jersey are licensed by the <strong>New Jersey Division of Gaming Enforcement (NJDGE)</strong>, ensuring strict consumer protections and fair odds.</p>

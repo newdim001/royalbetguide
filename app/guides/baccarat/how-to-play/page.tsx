@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Play Baccarat 2026 — Rules, Card Values & Betting | Royal Bet Guide",
+  title: "How to Play Baccarat 2026 — Rules, Card Values & Betting",
   description: "Learn how to play baccarat in 2026. Complete beginner's guide covering the objective, card values, drawing rules, house edge for Banker vs Player bets, and tips for picking the best casino.",
   alternates: { canonical: "https://royalbetguide.com/guides/baccarat/how-to-play/" },
 };

@@ -84,7 +84,7 @@ export default function ReviewsPage() {
 
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: 'document.title="51 Casino Reviews 2026 | Royal Bet Guide";' }} />
+      <script dangerouslySetInnerHTML={{ __html: 'document.title="Casino Reviews | Royal Bet Guide";' }} />
       <meta name="description" content="Read expert reviews of 51 online casinos. Compare ratings, bonuses, games, and payment methods. Updated June 2026." />
       <link rel="canonical" href="https://royalbetguide.com/reviews/" />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">

@@ -43,7 +43,15 @@ export default function MiraxCasinoEsPage() {
     { "@type": "Question", name: "¿Acepta crypto?", acceptedAnswer: { "@type": "Answer", text: "Sí, Bitcoin y Ethereum además de fiat con Visa, Mastercard y Skrill." } },
     { "@type": "Question", name: "¿Versión móvil?", acceptedAnswer: { "@type": "Answer", text: "Completamente optimizado para móviles sin necesidad de descargar apps." } },
   ]};
-  const productSchema = { "@context": "https://schema.org", "@type": "Product", name: c.name, description: "MiraxCasino Reseña 2026 - $500 + 200 Giros Gratis, 5000+ juegos, 96.3% RTP.", aggregateRating: { "@type": "AggregateRating", ratingValue: "8.2", bestRating: "10", worstRating: "0", ratingCount: "1" }, offers: { "@type": "Offer", name: "$500 + 200 Giros Gratis", description: "Paquete de bienvenida" } };
+    const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: c.name,
+    image: "https://royalbetguide.com/og/mirax-casino.png",
+    description: "MiraxCasino Reseña 2026 - $500 + 200 Giros Gratis, 5000+ juegos, 96.3% RTP.",
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "8.2", bestRating: "10", worstRating: "0", ratingCount: "1" },
+    
+  };
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://royalbetguide.com/es/" },
     { "@type": "ListItem", position: 2, name: "Reseñas", item: "https://royalbetguide.com/es/reviews/" },
@@ -52,7 +60,7 @@ export default function MiraxCasinoEsPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, productSchema, breadcrumbSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, organizationSchema, breadcrumbSchema]) }} />
       <div className="mb-6 rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">Podemos ganar una comisión si te registras a través de nuestros enlaces. Juega con responsabilidad. 18+</div>
       <div className="mb-6 text-sm text-slate-500">
         <Link href="/es/" className="hover:text-corg-500">Home</Link><span className="mx-2">→</span>

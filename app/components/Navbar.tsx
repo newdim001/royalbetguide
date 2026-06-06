@@ -162,7 +162,7 @@ const MEGA_MENUS = {
           { label: "Gates of Olympus", href: "/games/slots/gates-of-olympus/" },
           { label: "Sweet Bonanza", href: "/games/slots/sweet-bonanza/" },
           { label: "Wolf Gold", href: "/games/slots/wolf-gold/" },
-          { label: "Starburst", href: "/games/starburst/" },
+          { label: "Starburst", href: "/games/slots/starburst/" },
           { label: "Book of Dead", href: "/games/slots/book-of-dead/" },
           { label: "Big Bass Bonanza", href: "/games/slots/big-bass-bonanza/" },
         ],
@@ -196,7 +196,7 @@ const MEGA_MENUS = {
 };
 
 const ANNOUNCEMENT_BAR = [
-  { icon: '🎲', text: 'Launched 2026' },
+  { icon: '🎲', text: 'New 2026' },
   { icon: "🏆", text: "Expert casino & betting reviews" },
   { icon: "💰", text: "Exclusive welcome bonuses" },
   { icon: "🔒", text: "Safe & responsible gambling" },

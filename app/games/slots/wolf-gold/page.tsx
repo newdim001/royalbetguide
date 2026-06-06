@@ -2,7 +2,7 @@ import Link from "next/link";
 import GameDemoEmbed from "@/components/GameDemoEmbed";
 
 export const metadata = {
-  title: "Wolf Gold Slot 2026 — Pragmatic Play Slot with Jackpots | Royal Bet Guide",
+  title: "Wolf Gold Slot 2026 — Pragmatic Play Slot with Jackpots",
   description: "Complete Wolf Gold slot review by Pragmatic Play. RTP 96.0%, medium volatility, stacked wilds, blazing reels, and three progressive jackpots. Find the best casinos to play Wolf Gold.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/wolf-gold/",
@@ -32,6 +32,23 @@ export default function WolfGoldPage() {
             offers: { "@type": "Offer", price: "0.20", priceCurrency: "USD" },
             author: { "@type": "Person", name: "Kevin Brooks" },
             aggregateRating: { "@type": "AggregateRating", ratingValue: "8.5", bestRating: "10", ratingCount: "1" }
+          }, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Wolf Gold?", acceptedAnswer: { "@type": "Answer", text: "96.0%, which is standard for a medium-volatility Pragmatic Play slot." } },
+              { "@type": "Question", name: "Is Wolf Gold high volatility?", acceptedAnswer: { "@type": "Answer", text: "No, Wolf Gold is a medium-volatility slot. It offers a balanced mix of win frequency and payout size, making it accessible to all types of players." } },
+              { "@type": "Question", name: "Can I play Wolf Gold for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Wolf Gold. We recommend trying the demo to understand the Money Respin and free spins features before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Wolf Gold?", acceptedAnswer: { "@type": "Answer", text: "The maximum win is 2,500x your stake. The Mega Jackpot in the Money Respin feature pays 1,000x your bet." } },
+              { "@type": "Question", name: "Which casinos offer Wolf Gold?", acceptedAnswer: { "@type": "Answer", text: "Wolf Gold is available at most online casinos. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews and Pragmatic Play casinos guide for more options." } },
+              { "@type": "Question", name: "Is Wolf Gold available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Wolf Gold is fully optimised for mobile through HTML5 technology." } }
+            ]
           }, null, 2)
         }}
       />
@@ -67,8 +84,11 @@ export default function WolfGoldPage() {
           <h2 className="text-xl font-bold text-corg-600">Frequently Asked Questions</h2>
           <div className="mt-4 space-y-4">
             <div><h3 className="font-semibold text-corg-600">What is the RTP of Wolf Gold?</h3><p className="mt-1 text-sm text-slate-600">96.0%, which is standard for a medium-volatility Pragmatic Play slot.</p></div>
-            <div><h3 className="font-semibold text-corg-600">What are the jackpots in Wolf Gold?</h3><p className="mt-1 text-sm text-slate-600">Three fixed jackpots: Mini (30x), Major (150x), and Mega (1,000x your bet), won through the Money Respin feature.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Is Wolf Gold available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, fully optimised for mobile through HTML5 technology.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Wolf Gold high volatility?</h3><p className="mt-1 text-sm text-slate-600">No, Wolf Gold is a medium-volatility slot. It offers a balanced mix of win frequency and payout size, making it accessible to all types of players.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Can I play Wolf Gold for free?</h3><p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version of Wolf Gold. We recommend trying the demo to understand the Money Respin and free spins features before playing with real money.</p></div>
+            <div><h3 className="font-semibold text-corg-600">What is the max win on Wolf Gold?</h3><p className="mt-1 text-sm text-slate-600">The maximum win is 2,500x your stake. The Mega Jackpot in the Money Respin feature pays 1,000x your bet.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Which casinos offer Wolf Gold?</h3><p className="mt-1 text-sm text-slate-600">Wolf Gold is available at most online casinos. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews and Pragmatic Play casinos guide for more options.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Wolf Gold available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, Wolf Gold is fully optimised for mobile through HTML5 technology.</p></div>
           </div>
         </div>
         

@@ -24,6 +24,23 @@ export default function SlotPage() {
         <Link href="/games/slots/" className="hover:text-corg-500">Slots</Link><span className="mx-2">&rarr;</span>
         <span className="text-slate-800 font-semibold">{displayName}</span>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Buffalo King?", acceptedAnswer: { "@type": "Answer", text: "The RTP is 96.5%, which is above the industry average for online slots." } },
+              { "@type": "Question", name: "Is Buffalo King high volatility?", acceptedAnswer: { "@type": "Answer", text: "Yes, Buffalo King is a medium-high volatility slot. It offers a balance between win frequency and the potential for larger payouts, especially during the free spins round." } },
+              { "@type": "Question", name: "Can I play Buffalo King for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Buffalo King. We recommend trying the demo to experience the 4,096 ways and free spins with increasing multipliers before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Buffalo King?", acceptedAnswer: { "@type": "Answer", text: "The maximum win is 9,374x your stake, achievable during the free spins round with increasing multipliers up to 10x." } },
+              { "@type": "Question", name: "Which casinos offer Buffalo King?", acceptedAnswer: { "@type": "Answer", text: "Buffalo King is available at most online casinos. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews and Pragmatic Play casinos guide for more options." } },
+              { "@type": "Question", name: "Is Buffalo King available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Buffalo King is fully optimised for all mobile devices through HTML5 technology." } }
+            ]
+          }, null, 2)
+        }}
+      />
       <article>
         <div className="mb-10 text-center">
           <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">Slot Review</span>

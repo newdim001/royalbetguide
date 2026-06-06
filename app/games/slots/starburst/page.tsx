@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Starburst Slot 2026 — Play Starburst Online | Royal Bet Guide",
+  title: "Starburst Slot 2026 — Play Starburst Online",
   description: "Complete Starburst slot review. RTP 96.09%, low volatility, expanding wilds with re-spins. Find the best casinos to play Starburst online.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/starburst/",
@@ -31,6 +31,23 @@ export default function StarburstPage() {
             offers: { "@type": "Offer", price: "0.20", priceCurrency: "USD" },
             author: { "@type": "Person", name: "Michael Thompson" },
             aggregateRating: { "@type": "AggregateRating", ratingValue: "8.5", bestRating: "10", ratingCount: "1" }
+          }, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Starburst?", acceptedAnswer: { "@type": "Answer", text: "Starburst has a fixed RTP of 96.09%, which is above the average for online slots. Some casino versions may have slightly different RTP settings, so always check the game information screen before playing." } },
+              { "@type": "Question", name: "Is Starburst high volatility?", acceptedAnswer: { "@type": "Answer", text: "No, Starburst is a low-volatility slot. It offers frequent, smaller wins rather than rare massive payouts. This makes it ideal for casual players and beginners who prefer longer play sessions. The maximum win is 500x your stake." } },
+              { "@type": "Question", name: "Can I play Starburst for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Starburst. We recommend practising in demo mode to understand the mechanics before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Starburst?", acceptedAnswer: { "@type": "Answer", text: "The maximum win in Starburst is 500x your total stake. While not as high as progressive jackpot or high-volatility slots, the frequent wins and re-spin feature make it one of the most entertaining slots to play." } },
+              { "@type": "Question", name: "Which casinos offer Starburst?", acceptedAnswer: { "@type": "Answer", text: "Starburst is available at hundreds of online casinos including Jackpot City, Spin Casino, LeoVegas, BitStarz, Stake, and BC.Game. Browse our full casino reviews for more options and exclusive bonuses." } },
+              { "@type": "Question", name: "Is Starburst available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Starburst is fully optimised for mobile play. NetEnt was one of the first providers to develop HTML5 versions of all games, and Starburst runs smoothly on iOS and Android devices through any mobile browser or casino app." } }
+            ]
           }, null, 2)
         }}
       />
@@ -119,16 +136,24 @@ export default function StarburstPage() {
               <p className="mt-1 text-sm text-slate-600">Starburst has a fixed RTP of 96.09%, which is above the average for online slots. Some casino versions may have slightly different RTP settings, so always check the game information screen before playing.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-corg-600">Can I play Starburst on mobile?</h3>
-              <p className="mt-1 text-sm text-slate-600">Yes, Starburst is fully optimised for mobile play. NetEnt was one of the first providers to develop HTML5 versions of all games, and Starburst runs smoothly on iOS and Android devices through any mobile browser or casino app. <Link href="/games/mobile-games/" className="text-corg-500 hover:underline">Mobile gaming guide →</Link></p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-corg-600">Is Starburst a high-volatility slot?</h3>
+              <h3 className="font-semibold text-corg-600">Is Starburst high volatility?</h3>
               <p className="mt-1 text-sm text-slate-600">No, Starburst is a low-volatility slot. It offers frequent, smaller wins rather than rare massive payouts. This makes it ideal for casual players and beginners who prefer longer play sessions. The maximum win is 500x your stake.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-corg-600">What is the maximum win in Starburst?</h3>
-              <p className="mt-1 text-sm text-slate-600">The maximum win in Starburst is 500x your total stake. While not as high as progressive jackpot or high-volatility slots, the frequent wins and re-spin feature make it one of the most entertaining slots to play. For higher win potential, see our <Link href="/games/progressive-jackpots/" className="text-corg-500 hover:underline">progressive jackpots guide</Link>.</p>
+              <h3 className="font-semibold text-corg-600">Can I play Starburst for free?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version of Starburst. We recommend practising in demo mode to understand the mechanics before playing with real money.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">What is the max win on Starburst?</h3>
+              <p className="mt-1 text-sm text-slate-600">The maximum win in Starburst is 500x your total stake. While not as high as progressive jackpot or high-volatility slots, the frequent wins and re-spin feature make it one of the most entertaining slots to play.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">Which casinos offer Starburst?</h3>
+              <p className="mt-1 text-sm text-slate-600">Starburst is available at hundreds of online casinos including Jackpot City, Spin Casino, LeoVegas, BitStarz, Stake, and BC.Game. Browse our full casino reviews for more options and exclusive bonuses.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">Is Starburst available on mobile?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, Starburst is fully optimised for mobile play. NetEnt was one of the first providers to develop HTML5 versions of all games, and Starburst runs smoothly on iOS and Android devices through any mobile browser or casino app.</p>
             </div>
           </div>
         </div>

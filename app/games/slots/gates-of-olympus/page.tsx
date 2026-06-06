@@ -35,6 +35,23 @@ export default function GatesOfOlympusPage() {
           }, null, 2)
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Gates of Olympus?", acceptedAnswer: { "@type": "Answer", text: "The standard RTP for Gates of Olympus is 96.5%. Some casino operators may offer versions with lower RTP (94.5% or 95.5%) — always check the game info screen at your chosen casino to confirm the RTP." } },
+              { "@type": "Question", name: "Is Gates of Olympus high volatility?", acceptedAnswer: { "@type": "Answer", text: "Yes, Gates of Olympus is classified as a very high volatility slot. Wins can be infrequent, but they can be extremely large when they hit — particularly during the free spins round with accumulated multipliers." } },
+              { "@type": "Question", name: "Can I play Gates of Olympus for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Gates of Olympus. We recommend trying the demo to familiarise yourself with the tumbling reels and multiplier mechanics before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Gates of Olympus?", acceptedAnswer: { "@type": "Answer", text: "The maximum win is 5,000x your stake. This is achievable during the free spins round with high-value multiplier symbols that accumulate throughout the bonus." } },
+              { "@type": "Question", name: "Which casinos offer Gates of Olympus?", acceptedAnswer: { "@type": "Answer", text: "Gates of Olympus is available at virtually every major online casino. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews to find the best platform for your region." } },
+              { "@type": "Question", name: "Is Gates of Olympus available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Gates of Olympus is fully optimised for all mobile devices through HTML5 technology and runs smoothly on iOS and Android." } }
+            ]
+          }, null, 2)
+        }}
+      />
 <article>
         <div className="mb-10 text-center">
           <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">Game Review</span>
@@ -105,20 +122,24 @@ export default function GatesOfOlympusPage() {
               <p className="mt-1 text-sm text-slate-600">The standard RTP for Gates of Olympus is 96.5%. Some casino operators may offer versions with lower RTP (94.5% or 95.5%) — always check the game info screen at your chosen casino to confirm the RTP.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-corg-600">What is the max win in Gates of Olympus?</h3>
+              <h3 className="font-semibold text-corg-600">Is Gates of Olympus high volatility?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, Gates of Olympus is classified as a very high volatility slot. Wins can be infrequent, but they can be extremely large when they hit — particularly during the free spins round with accumulated multipliers.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">Can I play Gates of Olympus for free?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version of Gates of Olympus. We recommend trying the demo to familiarise yourself with the tumbling reels and multiplier mechanics before playing with real money.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">What is the max win on Gates of Olympus?</h3>
               <p className="mt-1 text-sm text-slate-600">The maximum win is 5,000x your stake. This is achievable during the free spins round with high-value multiplier symbols that accumulate throughout the bonus.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-corg-600">Can I buy the bonus in Gates of Olympus?</h3>
-              <p className="mt-1 text-sm text-slate-600">Yes — the Bonus Buy feature is available in most jurisdictions. It costs 100x your current bet and guarantees entry into the free spins round. This feature may not be available in the UK and certain other regulated markets.</p>
+              <h3 className="font-semibold text-corg-600">Which casinos offer Gates of Olympus?</h3>
+              <p className="mt-1 text-sm text-slate-600">Gates of Olympus is available at virtually every major online casino. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews to find the best platform for your region.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-corg-600">What provider created Gates of Olympus?</h3>
-              <p className="mt-1 text-sm text-slate-600">Gates of Olympus was developed by <Link href="/games/pragmatic-play-casinos/" className="text-corg-500 hover:underline">Pragmatic Play</Link>, one of the most prolific slot providers in the industry with over 400 games in their portfolio.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-corg-600">Is Gates of Olympus a high volatility slot?</h3>
-              <p className="mt-1 text-sm text-slate-600">Yes, Gates of Olympus is classified as a very high volatility slot. Wins can be infrequent, but they can be extremely large when they hit — particularly during the free spins round with accumulated multipliers.</p>
+              <h3 className="font-semibold text-corg-600">Is Gates of Olympus available on mobile?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, Gates of Olympus is fully optimised for all mobile devices through HTML5 technology and runs smoothly on iOS and Android.</p>
             </div>
           </div>
         </div>

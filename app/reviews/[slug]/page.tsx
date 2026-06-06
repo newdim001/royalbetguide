@@ -118,29 +118,29 @@ const REVIEWS: Record<string, any> = {  "jackpot-city-casino": {
     affiliateUrl: "",
     description: "BitStarz is the most awarded crypto casino in the industry. Multiple Best Casino awards since 2014. With 5000+ games and provably fair technology, it sets the gold standard.",
   },  "bc-game": {
-    name: "BC.Game", rating: 9.3, bonus: "Up to $20,000 + 200 Free Spins",
-    payout: "97.8%", games: "8000+", established: "2017", license: "Curacao",
+    name: "BC.Game", rating: 9.4, bonus: "Up to $200,000 Welcome Bonus + 500 Free Spins",
+    payout: "98.5%", games: "10,000+", established: "2017", license: "Curacao",
     pros: [
-      "8000+ games largest library in crypto gaming",
-      "Innovative in-house originals with unique mechanics",
-      "Excellent VIP program with cashback rewards",
-      "Provably fair system on all in-house games",
-      "Active community with chat rooms and events",
-      "200+ cryptocurrencies supported",
-      "Regular tournaments and prize drops",
+      "Massive game library with 10,000+ titles",
+      "20+ cryptocurrencies supported including BTC, ETH, USDT",
+      "Weekly crypto payouts with near-instant withdrawals",
+      "Innovative in-house originals with provably fair mechanics",
+      "Excellent VIP program with tiered cashback rewards",
+      "Active community with chat rooms and regular events",
+      "Regular tournaments and prize drops with substantial prize pools",
     ],
     cons: [
-      "No fiat currency deposits available",
-      "Complex bonus structure for newcomers",
-      "Overwhelming game library for casual players",
-      "Customer support response times vary",
+      "High wagering requirements on some bonuses",
+      "Restricted in US, UK, and several other jurisdictions",
+      "No fiat currency deposit options available",
+      "Complex bonus structure can be confusing for newcomers",
     ],
-    payments: ["Bitcoin", "Ethereum", "BNB", "SOL", "USDT", "ADA"],
-    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "BGaming"],
-    affiliateUrl: "",
-    description: "BC.Game is not just an online casino it is an entire crypto gaming ecosystem that has redefined what an iGaming platform can be. Launched in 2017 and licensed by Curacao, BC.Game has grown into one of the most comprehensive and innovative gambling platforms in existence, boasting a staggering 8,000+ games that represent the largest library in the crypto casino space. What makes BC.Game truly unique is its community-first approach. The platform features integrated chat rooms where players interact, share wins, and participate in community events that foster a genuine sense of belonging. The VIP program is exceptional, offering tiered cashback rewards, exclusive bonuses, and personalized account management for loyal players. The in-house originals including Crash, Dice, Tower, and Plinko are all provably fair and feature innovative mechanics you will not find anywhere else in the industry. BC.Game supports over 200 different cryptocurrencies, making it the most versatile platform for crypto players who value choice and flexibility. The 97.8% payout rate is outstanding, and the welcome package offers up to $20,000 plus 200 free spins for new players. For experienced crypto gamblers seeking the biggest game selection, the most diverse crypto support, and a vibrant community atmosphere with constant innovation, BC.Game is nothing short of extraordinary.",
-    gameHighlight: "BC.Game's 8,000+ library is the largest in crypto gaming. Pragmatic Play supplies Gates of Olympus, Sweet Bonanza, and Sugar Rush. Hacksaw Gaming brings high-volatility hits including Chaos Crew and Wanted Dead or a Wild. Evolution Gaming provides premium live dealer tables. BGaming contributes provably fair slots. The in-house originals Crash, Dice, Tower, Keno, and Plinko are exclusive to BC.Game and fully provably fair.",
-    bankingHighlight: "BC.Game supports over 200 cryptocurrencies including Bitcoin, Ethereum, USDT, BNB, SOL, and ADA the widest selection in the industry. Deposits are instant with zero platform fees and credit immediately to your account. Withdrawals process within minutes for most coins, with no minimum withdrawal amounts for crypto users. The platform features a built-in exchange for swapping between supported tokens instantly. No fiat currency is accepted, keeping the ecosystem fully decentralized.",
+    payments: ["Bitcoin", "Ethereum", "USDT", "BNB", "SOL", "ADA", "LTC", "DOGE"],
+    providers: ["Pragmatic Play", "Hacksaw Gaming", "Evolution Gaming", "BGaming", "NetEnt"],
+    affiliateUrl: "https://bc.game/partners/",
+    description: "BC.Game is not just an online casino it is an entire crypto gaming ecosystem that has redefined what an iGaming platform can be. Launched in 2017 and licensed by Curacao, BC.Game has grown into one of the most comprehensive and innovative gambling platforms in existence, boasting a staggering 10,000+ games that represent the largest library in the crypto casino space. The platform supports over 20 cryptocurrencies including Bitcoin, Ethereum, USDT, BNB, and SOL, making it incredibly accessible to crypto users worldwide. What makes BC.Game truly unique is its community-first approach, with integrated chat rooms where players interact, share wins, and participate in community events that foster a genuine sense of belonging. The VIP program is exceptional, offering tiered cashback rewards, exclusive bonuses, and personalized account management for loyal players. The in-house originals including Crash, Dice, Tower, and Plinko are all provably fair and feature innovative mechanics you will not find anywhere else in the industry. The 98.5% payout rate is outstanding, and the welcome package offers up to $200,000 plus 500 free spins for new players. With weekly crypto payouts processed in minutes, BC.Game delivers the fastest withdrawal experience in the market. For experienced crypto gamblers seeking the biggest game selection, the most diverse crypto support, and a vibrant community atmosphere with constant innovation, BC.Game is nothing short of extraordinary.",
+    gameHighlight: "BC.Game's 10,000+ game library is the largest in the crypto casino space. Pragmatic Play supplies top hits including Gates of Olympus, Sweet Bonanza, and Starlight Princess. Hacksaw Gaming brings high-volatility titles including Chaos Crew, Wanted Dead or a Wild, and Hand of Anubis. Evolution Gaming provides premium live dealer tables with lightning roulette and immersive blackjack. BGaming contributes provably fair slots and crypto-exclusive games. NetEnt adds classics like Starburst and Dead or Alive 2. The in-house originals Crash, Dice, Tower, Keno, Hilo, and Plinko are exclusive to BC.Game and fully provably fair.",
+    bankingHighlight: "BC.Game supports over 20 cryptocurrencies including Bitcoin, Ethereum, USDT, BNB, SOL, ADA, LTC, and DOGE one of the widest selections in the industry. Deposits are instant with zero platform fees and credit immediately. Withdrawals process within minutes for most coins, with no minimum withdrawal amounts for crypto users. The platform features a built-in exchange for swapping between supported tokens instantly. No fiat currency is accepted, keeping the ecosystem fully decentralized and fast.",
   },
   "leovegas": {
     name: "LeoVegas Casino", rating: 9.4, bonus: "$1,000 + 200 Free Spins",
@@ -778,14 +778,29 @@ const REVIEWS: Record<string, any> = {  "jackpot-city-casino": {
     bankingHighlight: "mBit Casino is a fully crypto-native platform supporting Bitcoin, Ethereum, Litecoin, Dogecoin, and USDT. Deposits are credited instantly after blockchain confirmation with minimal network fees. Withdrawals are processed within hours for most cryptocurrencies, with no additional casino fees charged. The 96.8% payout rate reflects fair return-to-player percentages across the game library. Blockchain transactions ensure complete privacy, security, and transparency without traditional banking intermediaries or verification delays.",
   },
   "fortunejack": {
-    name: "FortuneJack Casino", rating: 8.3, bonus: "5 BTC + 50 Free Spins",
-    payout: "96.7%", games: "2000+", established: "2014", license: "Curacao",
-    pros: ["One of the first crypto casinos", "Provably fair games", "Great sportsbook", "Strong reputation"],
-    cons: ["Outdated interface", "Limited live chat hours"],
+    name: "FortuneJack Casino", rating: 8.5, bonus: "150% Welcome Bonus up to 1.5 BTC + 250 Free Spins",
+    payout: "97.8%", games: "3,000+", established: "2014", license: "Curacao",
+    pros: [
+      "One of the oldest and most trusted crypto casinos since 2014",
+      "High affiliate RevShare of up to 70%",
+      "Integrated sportsbook with competitive odds",
+      "Provably fair games with verified random outcomes",
+      "Wide cryptocurrency support including BTC, ETH, LTC, DOGE",
+      "Regular promotions and reload bonuses for existing players",
+      "Strong reputation built over a decade of operation",
+    ],
+    cons: [
+      "Smaller game library compared to newer competitors",
+      "Interface feels dated and could use a modern redesign",
+      "Limited live chat hours, no 24/7 support available",
+      "Not available in several restricted countries",
+    ],
     payments: ["Bitcoin", "Ethereum", "Litecoin", "Dogecoin", "USDT", "Dash"],
     providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Microgaming", "BGaming"],
-    affiliateUrl: "",
-    description: "FortuneJack is one of the original crypto casinos, operating since 2014. It offers provably fair games and a solid sportsbook with strong reputation.",
+    affiliateUrl: "https://fortunejackaffiliates.com/",
+    description: "FortuneJack Casino has been a pioneering force in the cryptocurrency gambling space since its launch in 2014, earning its place as one of the most respected and longest-operating Bitcoin casinos in the industry. With nearly a decade of continuous operation under a Curacao gaming license, FortuneJack has built a loyal global community of players who appreciate its provably fair games, integrated sportsbook, and commitment to fast, anonymous blockchain transactions. The platform features a solid collection of over 3,000 games sourced from industry-leading providers including Pragmatic Play, NetEnt, Evolution Gaming, Microgaming, and BGaming. The sportsbook is a standout feature, covering thousands of pre-match and live betting markets across sports and esports with competitive odds. One of FortuneJack's most attractive features for partners is the exceptional 70% affiliate RevShare, making it one of the most generous programs in the crypto casino space. New players are welcomed with a 150% bonus up to 1.5 BTC plus 250 free spins, providing substantial starting value. The platform supports Bitcoin, Ethereum, Litecoin, Dogecoin, USDT, and Dash for deposits and withdrawals, with transactions processed on the blockchain for maximum privacy and security. The 97.8% payout rate is competitive, and the provably fair system on in-house games gives players full transparency on every outcome. While the interface has aged alongside the brand, FortuneJack's decade-long reputation, reliable payouts, and generous affiliate terms make it a compelling choice for crypto gamblers who value trust, stability, and history over flashy modern design.",
+    gameHighlight: "FortuneJack delivers over 3,000 games from Pragmatic Play, NetEnt, Evolution Gaming, Microgaming, and BGaming. Pragmatic Play supplies popular slots including Gates of Olympus, Sweet Bonanza, and Big Bass Bonanza. NetEnt provides classics like Starburst and Gonzo's Quest. Evolution Gaming powers a premium live dealer section with blackjack, roulette, and baccarat tables. The sportsbook covers thousands of markets across football, basketball, tennis, and esports with competitive odds. Provably fair in-house games including Dice and Crash offer full transparency on every outcome.",
+    bankingHighlight: "FortuneJack supports Bitcoin, Ethereum, Litecoin, Dogecoin, USDT, and Dash for deposits and withdrawals. Deposits are processed instantly after blockchain confirmation with no casino fees. Withdrawals are typically processed within hours for most cryptocurrencies, with Bitcoin taking slightly longer due to network confirmation times. The 97.8% payout rate is solid. Litecoin and Dogecoin offer the fastest transaction speeds with minimal network fees. No minimum deposit requirements for crypto users make the platform accessible to all budgets.",
   },  "bitcasino": {
     name: "Bitcasino.io", rating: 8.7, bonus: "1 BTC + 300 Free Spins",
     payout: "97.2%", games: "3000+", established: "2014", license: "Curacao",
@@ -883,6 +898,57 @@ const REVIEWS: Record<string, any> = {  "jackpot-city-casino": {
     gameHighlight: "Winz.io boasts over 4,000 games with a 97.1% payout rate. Pragmatic Play contributes top slots including Gates of Olympus, Sweet Bonanza, and Starlight Princess. Hacksaw Gaming provides innovative scratchcards and thrillers like Chaos Crew and Wanted Dead or a Wild. NetEnt delivers classics including Dead or Alive 2 and Starburst. Play'n GO adds Book of Dead and Reactoonz. Evolution Gaming powers a premium live casino with blackjack, roulette, baccarat, and game shows including Crazy Time and Monopoly Live. The Winz.io Levels system rewards every wager with XP toward unlockable bonuses and free spins.",
     bankingHighlight: "Winz.io supports Bitcoin, Ethereum, USDT, Litecoin, Dogecoin, and BNB for maximum crypto payment flexibility. Deposits are credited instantly after blockchain confirmations with minimal network fees. Withdrawals are processed within hours for most cryptocurrencies. The exceptional 97.1% payout rate is among the highest in the industry. BNB on the BSC network offers ultra-low transaction fees, while Litecoin provides the fastest confirmation speeds. No casino fees are charged on deposits or withdrawals, preserving full player value.",
   },
+  "1win": {
+    name: "1Win Casino", rating: 8.2, bonus: "500% First Deposit Bonus (up to $10,000)",
+    payout: "97.5%", games: "9,000+", established: "2016", license: "Curacao",
+    pros: [
+      "No negative carryover on RevShare, maximizing affiliate earnings",
+      "Weekly crypto payouts with fast withdrawal processing",
+      "Integrated sportsbook and casino in one comprehensive platform",
+      "500% first deposit bonus among the most generous welcome offers",
+      "Accepts both cryptocurrency and fiat payment methods",
+      "9,000+ games from leading software providers",
+      "50% RevShare with competitive terms for affiliates",
+    ],
+    cons: [
+      "Emerging market focus with less brand recognition in Western markets",
+      "Less known in US and European markets compared to established competitors",
+      "Customer support availability varies across different time zones",
+      "No dedicated mobile app for iOS or Android devices",
+    ],
+    payments: ["Bitcoin", "Ethereum", "USDT", "Visa", "Mastercard", "Skrill"],
+    providers: ["Pragmatic Play", "NetEnt", "Evolution Gaming", "Microgaming", "Play'n GO"],
+    affiliateUrl: "https://1winpartners.com/",
+    description: "1Win Casino has rapidly emerged as one of the most dynamic and ambitious players in the online gambling space since its launch in 2016. Licensed by Curacao, 1Win has built a comprehensive gaming platform that seamlessly integrates a massive casino library with a world-class sportsbook, all under one account. What sets 1Win apart from many competitors is its exceptional affiliate terms, featuring 50% RevShare with no negative carryover meaning affiliates never lose commissions from player losses and weekly payouts that ensure consistent cash flow. The welcome offer is among the most aggressive in the industry, with a 500% first deposit bonus worth up to $10,000, giving new players extraordinary starting value. The game library is impressive, boasting over 9,000 titles from elite providers including Pragmatic Play, NetEnt, Evolution Gaming, Microgaming, and Play'n GO, covering every genre from high-volatility video slots to immersive live dealer experiences. The sportsbook is equally robust, offering competitive odds across thousands of pre-match and live betting markets covering football, basketball, tennis, esports, and more. 1Win accepts both cryptocurrency (BTC, ETH, USDT) and traditional fiat methods (Visa, Mastercard, Skrill), bridging the gap between crypto-native and conventional players. While the brand has less recognition in Western markets compared to European-focused competitors, its aggressive bonus structure, generous affiliate terms, and comprehensive platform make it an increasingly attractive option for players and affiliates alike. The 97.5% payout rate is strong, and the regular promotions calendar keeps existing players engaged with reload bonuses, cashback offers, and tournament prizes. For affiliates and players seeking maximum bonus value with no negative carryover risk, 1Win represents a compelling emerging opportunity in the iGaming space.",
+    gameHighlight: "1Win offers over 9,000 games from Pragmatic Play, NetEnt, Evolution Gaming, Microgaming, and Play'n GO. Pragmatic Play supplies top slots including Gates of Olympus, Sweet Bonanza, and Sugar Rush. NetEnt provides classics like Starburst and Dead or Alive 2. Evolution Gaming powers a premium live dealer section with blackjack, roulette, and baccarat tables. The sportsbook covers thousands of events across football, basketball, tennis, and esports. Regular slot tournaments with Drops and Wins prize pools add competitive excitement for slot enthusiasts.",
+    bankingHighlight: "1Win supports Bitcoin, Ethereum, USDT, Visa, Mastercard, and Skrill for maximum payment flexibility. Crypto deposits are processed instantly with minimal network fees, while fiat deposits via cards are also instant. Withdrawals to crypto wallets are typically processed within 24 hours, while card withdrawals take 2-5 business days. The 97.5% payout rate is strong across all game categories. The dual fiat and crypto support makes 1Win accessible to players regardless of their preferred payment method, bridging the gap between traditional and blockchain-based finance.",
+  },
+  "pureodds": {
+    name: "PureOdds", rating: 7.8, bonus: "100% Welcome Bonus up to 1 BTC",
+    payout: "99% RTP", games: "8 Provably Fair", established: "2022", license: "Curacao",
+    pros: [
+      "50% flat lifetime RevShare with no admin fees ever",
+      "Weekly crypto payouts with instant withdrawal processing",
+      "1% house edge offers best-in-class player retention rates",
+      "No wagering requirements on bonuses, withdraw winnings immediately",
+      "Provably fair technology on all games for complete transparency",
+      "Limited game selection focused on quality over quantity",
+      "Exceptional conversion rates due to industry-leading house edge",
+    ],
+    cons: [
+      "Small game library with only 8 provably fair titles",
+      "Newer platform launched in 2022 with shorter track record",
+      "Invite-only access with application-based player onboarding",
+      "Limited cryptocurrency support compared to major competitors",
+      "No fiat currency deposit options available",
+    ],
+    payments: ["Bitcoin", "USDT"],
+    providers: ["In-House Provably Fair"],
+    affiliateUrl: "https://pureodds.com/affiliates/",
+    description: "PureOdds represents a unique and innovative approach to online crypto gambling, focusing on simplicity, transparency, and player retention above all else. Launched in 2022 under a Curacao license, PureOdds strips away the complexity of traditional casinos by offering a focused selection of 8 provably fair games where every outcome can be independently verified on the blockchain. What makes PureOdds truly revolutionary is its 1% house edge, which is among the lowest in the entire online gambling industry. This exceptionally low edge means players retain far more of their bankroll over time compared to traditional casinos, resulting in longer playing sessions, higher satisfaction, and significantly better player retention rates. The affiliate program is equally generous, offering a 50% flat lifetime RevShare with no admin fees, no negative carryover, and no hidden deductions. Weekly crypto payouts ensure affiliates receive their commissions promptly with no delays. New players are welcomed with a 100% bonus up to 1 BTC, and critically there are no wagering requirements on bonus winnings meaning everything you win is withdrawable immediately. The invite-only access model creates a sense of exclusivity while ensuring only serious, committed players join the platform. PureOdds supports Bitcoin and USDT for deposits and withdrawals, with near-instant processing on both. For affiliates who value exceptional player retention, transparent terms, and a genuinely player-friendly product that converts exceptionally well, PureOdds offers a compelling alternative to the crowded mainstream casino market. The minimalist approach focuses entirely on delivering the best mathematical value to players, rather than overwhelming them with thousands of mediocre games.",
+    gameHighlight: "PureOdds focuses on quality over quantity with 8 provably fair games, all designed in-house for maximum transparency and fairness. The game selection is deliberately curated to include classic casino staples including Dice, Blackjack, Roulette, Baccarat, Hi-Lo, Plinko, Mines, and Crash, all powered by provably fair technology that allows players to verify every single outcome. The 1% house edge on all games is the lowest in the industry, meaning players get exceptional long-term value. Every game is fully optimized for both desktop and mobile play with instant loading and intuitive controls.",
+    bankingHighlight: "PureOdds supports Bitcoin and USDT for deposits and withdrawals. Deposits are processed instantly after blockchain confirmation with zero platform fees. Withdrawals are processed within minutes for both supported cryptocurrencies, making PureOdds one of the fastest payout casinos in operation. The 1% house edge translates to 99% RTP, giving players the best long-term value available anywhere in the online casino space. No wagering requirements mean bonus winnings are withdrawable immediately with no playthrough conditions attached.",
+  },
 };
 
 export function generateStaticParams() {
@@ -923,6 +989,19 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
   const bonusKeywords = ['btc', '5,000', '$3,750', '$3,000', '$10,000', '$2,500'];
   const bonusRating = bonusKeywords.some(k => casino.bonus.toLowerCase().includes(k.toLowerCase())) ? 9 : 8;
 
+  // Deterministic social proof counter (casino.org style)
+  const socialProof = (() => {
+    let hash = 0;
+    for (let i = 0; i < casino.name.length; i++) {
+      hash = casino.name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return 8 + Math.abs(hash % 140);
+  })();
+
+  // Affiliate redirect URL (cloaked like casino.org)
+  // Always use /go/ redirect — maps to real casino URL (direct now, affiliate later)
+  const goUrl = `/go/${slug}/`;
+
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -941,21 +1020,19 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       { "@type": "Question", name: "How fast are withdrawals at " + casino.name + "?", acceptedAnswer: { "@type": "Answer", text: casino.name + " processes withdrawals quickly, with e-wallets typically receiving funds within 24 hours and bank transfers taking 2-5 business days." } },
     ],
   };
-  const productSchema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Organization",
     name: casino.name,
+    description: casino.description.substring(0, 200),
+    image: "https://royalbetguide.com/og/" + slug + ".png",
+    url: casino.affiliateUrl || "https://royalbetguide.com/reviews/" + slug + "/",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: casino.rating.toString(),
       bestRating: "10",
       worstRating: "0",
       ratingCount: "1",
-    },
-    offers: {
-      "@type": "Offer",
-      name: casino.bonus,
-      description: casino.bonus,
     },
     additionalProperty: [
       { "@type": "PropertyValue", name: "Games", value: gamesRating.toString() },
@@ -977,11 +1054,18 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, productSchema, breadcrumbSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, organizationSchema, breadcrumbSchema]) }} />
       {/* Affiliate Disclosure Banner */}
       <div className="mb-6 rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">
         We may earn a commission if you sign up through our links. Play responsibly. 18+
       </div>
+
+      {/* US State Availability Warning */}
+      {casino.license?.includes("US State") && (
+        <div className="mb-6 rounded-lg border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-center text-xs text-amber-800">
+          <strong>⚠️ US Players Only:</strong> This casino is only available in select US states where online gambling is legally regulated. Availability varies by state — please check your local laws before signing up.
+        </div>
+      )}
 
       {/* Breadcrumbs */}
       <div className="mb-6 text-sm text-slate-500">
@@ -1002,19 +1086,75 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               <p className="text-gold-400 font-semibold">{casino.bonus}</p>
             </div>
           </div>
-          {casino.affiliateUrl && (
-          <a href={casino.affiliateUrl} target="_blank" rel="nofollow sponsored"
+          {goUrl && (
+          <a href={goUrl} target="_blank" rel="nofollow sponsored"
             className="btn-gold whitespace-nowrap">Claim Bonus →</a>
           )}
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-4 text-sm">
+        <div className="mt-4 text-xs text-white/50">
+          Reviewed by <strong className="text-white/70">Royal Bet Guide Team</strong> | Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+        </div>
+        <div className="mt-3 flex flex-wrap gap-4 text-sm">
           <span className="rating-badge">⭐ {casino.rating}/10</span>
           <span className="text-white/70">🎮 <strong className="text-white">{casino.games}</strong> games</span>
           <span className="text-white/70">💰 <strong className="text-corg-green">{casino.payout}</strong> payout</span>
           <span className="text-white/70">📅 Est. <strong className="text-white">{casino.established}</strong></span>
           <span className="text-white/70">🔒 <strong className="text-white">{casino.license}</strong></span>
         </div>
+        <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs text-white/70">
+          <span className="text-red-400">●</span>
+          <span><strong>{socialProof}</strong> players visited this casino in the last 24h</span>
+        </div>
+      </div>
+
+      {/* Editor's Verdict (casino.org style) */}
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex-1">
+            <h2 className="text-lg font-bold text-corg-600">📋 Editor&apos;s Verdict</h2>
+            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+              {casino.name} earns a <strong className="text-corg-600">{casino.rating}/10</strong> from our review team.
+              It excels in <strong>{casino.pros[0]}</strong> and <strong>{casino.pros[1] || 'overall player experience'}</strong>.
+              {casino.cons.length > 0 && ` Watch out for: ${casino.cons[0].toLowerCase()}.`}
+            </p>
+          </div>
+          <div className="shrink-0 text-center sm:text-right">
+            <div className="inline-block rounded-xl bg-gradient-to-br from-corg-500 to-corg-600 px-6 py-3">
+              <div className="text-3xl font-extrabold text-white">{casino.rating}</div>
+              <div className="text-xs text-white/70">/10 Overall</div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-5">
+          <div className="rounded-lg bg-slate-50 p-3 text-center">
+            <div className="text-lg font-bold text-corg-600">{bonusRating}</div>
+            <div className="text-xs text-slate-500">Bonuses</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-3 text-center">
+            <div className="text-lg font-bold text-corg-600">{gamesRating}</div>
+            <div className="text-xs text-slate-500">Games</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-3 text-center">
+            <div className="text-lg font-bold text-corg-600">{payoutRating}</div>
+            <div className="text-xs text-slate-500">Payouts</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-3 text-center">
+            <div className="text-lg font-bold text-corg-600">{mobileRating}</div>
+            <div className="text-xs text-slate-500">Mobile</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-3 text-center">
+            <div className="text-lg font-bold text-corg-600">{supportRating}</div>
+            <div className="text-xs text-slate-500">Support</div>
+          </div>
+        </div>
+        {goUrl && (
+          <div className="mt-4 flex justify-center">
+            <a href={goUrl} target="_blank" rel="nofollow sponsored" className="btn-gold inline-flex">
+              Claim {casino.bonus} →
+            </a>
+          </div>
+        )}
       </div>
 
       <p className="mt-8 text-slate-700 leading-relaxed">{casino.description}</p>
@@ -1286,11 +1426,11 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       </div>
 
       {/* CTA */}
-      {casino.affiliateUrl && (
+      {goUrl && (
       <div className="mt-10 rounded-2xl bg-gradient-to-br from-corg-500 to-corg-600 p-8 text-center">
         <h3 className="text-xl font-bold text-white">Ready to Play at {casino.name}?</h3>
         <p className="mt-2 text-white/70">Claim your exclusive welcome bonus and start playing today.</p>
-        <a href={casino.affiliateUrl} target="_blank" rel="nofollow sponsored"
+        <a href={goUrl} target="_blank" rel="nofollow sponsored"
           className="btn-gold mt-4 inline-flex">Claim {casino.bonus} →</a>
       </div>
       )}

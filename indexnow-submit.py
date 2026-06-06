@@ -8,9 +8,9 @@ KEY_LOCATION = f"https://royalbetguide.com/{INDEXNOW_KEY}.txt"
 HOST = "royalbetguide.com"
 
 def fetch_sitemap_urls():
-    req = urllib.request.Request(SITEMAP_URL, headers={"User-Agent": "Mozilla/5.0"})
-    resp = urllib.request.urlopen(req, timeout=15)
-    tree = ET.fromstring(resp.read())
+    # Read the generated sitemap from build output (source of truth)
+    with open("out/sitemap.xml", "rb") as f:
+        tree = ET.fromstring(f.read())
     ns = {"ns": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = [loc.text for loc in tree.findall(".//ns:loc", ns)]
     return urls

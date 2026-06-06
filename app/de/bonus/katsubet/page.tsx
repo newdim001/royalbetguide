@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KatsuBet Bonus 2026 - 325% + 200 Freispiele sichern | Royal Bet Guide",
+  title: "KatsuBet Bonus 2026 - 325% + 200 Freispiele sichern",
   description:
     "KatsuBet Bonus 2026: Sichere Dir 325% + 200 Freispiele Willkommenspaket. Turnier-Boni, Umsatzbedingungen und Schritt-für-Schritt-Anleitung – Jetzt exklusiv sichern!",
   alternates: { canonical: "https://royalbetguide.com/de/bonus/katsubet/" },
@@ -19,16 +19,11 @@ const AFFILIATE_URL = "https://katsubet.partners/px4e6itoe";
 export default function KatsuBetBonusDePage() {
   const bonusSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Organization",
     name: "KatsuBet Willkommensbonus 2026",
+    image: "https://royalbetguide.com/og/katsubet.png",
     description: "325% + 200 Freispiele Willkommenspaket bei KatsuBet",
-    offers: {
-      "@type": "Offer",
-      name: "325% + 200 Freispiele",
-      description:
-        "Verteilt auf die ersten Einzahlungen. 35-fache Umsatzbedingung. Nur für Neukunden. 18+",
-      url: AFFILIATE_URL,
-    },
+    
   };
 
   return (

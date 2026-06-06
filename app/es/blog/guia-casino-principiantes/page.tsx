@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Guía Completa de Casino Online para Principiantes 2026 - Empieza Seguro | Royal Bet Guide",
+  title: "Guía Completa de Casino Online para Principiantes 2026 - Empieza Seguro",
   description: "Guía completa para principiantes de casinos online. Licencias, bonos, métodos de pago - por expertos para jugadores españoles.",
   alternates: { canonical: "https://royalbetguide.com/es/blog/guia-casino-principiantes/" },
 };

@@ -28,10 +28,11 @@ const FOOTER_LINKS = {
     { label: "Blackjack Guide", href: "/guides/blackjack/" },
     { label: "Roulette Guide", href: "/guides/roulette/" },
     { label: "Poker Guide", href: "/guides/poker/" },
+    { label: "Bonus Calculator", href: "/tools/bonus-calculator/" },
   ],
   "Trust & Safety": [
     { label: "About Us", href: "/about/" },
-    { label: "How We Review", href: "/features/" },
+    { label: "How We Rate", href: "/how-we-rate/" },
     { label: "Responsible Gambling", href: "/responsible-gambling/" },
     { label: "Contact Us", href: "/contact/" },
   ],
@@ -58,7 +59,7 @@ export default function Footer() {
             <span className="text-lg font-bold text-white">Royal Bet Guide</span>
           </Link>
           <p className="max-w-md text-sm leading-relaxed text-white/50">
-            Your trusted source for online casino reviews, betting guides, and bonus comparisons since 2026.
+            Your trusted source for online casino reviews, betting guides, and bonus comparisons.
           </p>
         </div>
 
@@ -97,9 +98,9 @@ export default function Footer() {
             <span>We may earn a commission if you sign up through our links.</span>
           </div>
           <div className="mt-3 text-center text-[10px] text-white/20 leading-relaxed">
-            Royal Bet Guide is an independent information resource. We are not a gambling operator.
+            Royal Bet Guide is an independent review site. We are <strong>not affiliated</strong> with RoyalBet, RoyalBet.top, or any casino operator. We review casinos, we do not operate them. | 
             Gambling involves financial risk. Only gamble with money you can afford to lose.
-            If you or someone you know has a gambling problem, please call <a href="https://www.gamblingtherapy.org/" target="_blank" rel="noopener" className="text-gold-400/60 hover:text-gold-400">Gambling Therapy</a> or <a href="https://www.gamcare.org.uk/" target="_blank" rel="noopener" className="text-gold-400/60 hover:text-gold-400">GamCare</a>.
+            If you or someone you know has a gambling problem, please call <a href="https://www.gamblingtherapy.org/" target="_blank" rel="noopener" className="text-gold-400/60 hover:text-gold-400">Gambling Therapy</a> or <a href="https://www.gamcare.org.uk/" target="_blank" rel="noopener" className="text-gold-400/60 hover:text-gold-400">GamCare</a> (UK) or the <a href="https://www.ncpgambling.org/" target="_blank" rel="noopener" className="text-gold-400/60 hover:text-gold-400">National Council on Problem Gambling</a> at <strong className="text-gold-400/60">1-800-522-4700</strong> (US).
           </div>
         </div>
       </div>

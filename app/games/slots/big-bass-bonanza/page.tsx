@@ -2,7 +2,7 @@ import Link from "next/link";
 import GameDemoEmbed from "@/components/GameDemoEmbed";
 
 export const metadata = {
-  title: "Big Bass Bonanza Slot 2026 — Fishing Slot 96.71% RTP | Royal Bet Guide",
+  title: "Big Bass Bonanza Slot 2026 — Fishing Slot 96.71% RTP",
   description: "Complete Big Bass Bonanza slot review by Pragmatic Play. RTP 96.71%, high volatility, fishing-themed with money collect feature, max win 4,000x. Find the best casinos to play.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/big-bass-bonanza/",
@@ -32,6 +32,23 @@ export default function BigBassBonanzaPage() {
             offers: { "@type": "Offer", price: "0.20", priceCurrency: "USD" },
             author: { "@type": "Person", name: "Jason Reed" },
             aggregateRating: { "@type": "AggregateRating", ratingValue: "8.5", bestRating: "10", ratingCount: "1" }
+          }, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Big Bass Bonanza?", acceptedAnswer: { "@type": "Answer", text: "96.71%, which is among the highest RTPs for a high-volatility Pragmatic Play slot." } },
+              { "@type": "Question", name: "Is Big Bass Bonanza high volatility?", acceptedAnswer: { "@type": "Answer", text: "Yes, Big Bass Bonanza is a high-volatility slot. Wins can be less frequent, but the free spins round with accumulated multipliers offers the potential for large payouts." } },
+              { "@type": "Question", name: "Can I play Big Bass Bonanza for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Big Bass Bonanza. We recommend trying the demo to understand the money collect mechanic before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Big Bass Bonanza?", acceptedAnswer: { "@type": "Answer", text: "4,000x your stake, achievable through accumulated multipliers during the free spins round." } },
+              { "@type": "Question", name: "Which casinos offer Big Bass Bonanza?", acceptedAnswer: { "@type": "Answer", text: "Big Bass Bonanza is available at most online casinos. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews and Pragmatic Play casinos guide for more options." } },
+              { "@type": "Question", name: "Is Big Bass Bonanza available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Big Bass Bonanza is fully optimised for mobile through HTML5 technology." } }
+            ]
           }, null, 2)
         }}
       />
@@ -67,9 +84,11 @@ export default function BigBassBonanzaPage() {
           <h2 className="text-xl font-bold text-corg-600">Frequently Asked Questions</h2>
           <div className="mt-4 space-y-4">
             <div><h3 className="font-semibold text-corg-600">What is the RTP of Big Bass Bonanza?</h3><p className="mt-1 text-sm text-slate-600">96.71%, which is among the highest RTPs for a high-volatility Pragmatic Play slot.</p></div>
-            <div><h3 className="font-semibold text-corg-600">What is the maximum win?</h3><p className="mt-1 text-sm text-slate-600">4,000x your stake, achievable through accumulated multipliers during the free spins round.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Can I buy the bonus feature?</h3><p className="mt-1 text-sm text-slate-600">Yes, where permitted, for 50x your stake with a chance of higher starting multipliers.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Is Big Bass Bonanza available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, fully optimised for mobile through HTML5 technology.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Big Bass Bonanza high volatility?</h3><p className="mt-1 text-sm text-slate-600">Yes, Big Bass Bonanza is a high-volatility slot. Wins can be less frequent, but the free spins round with accumulated multipliers offers the potential for large payouts.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Can I play Big Bass Bonanza for free?</h3><p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version of Big Bass Bonanza. We recommend trying the demo to understand the money collect mechanic before playing with real money.</p></div>
+            <div><h3 className="font-semibold text-corg-600">What is the max win on Big Bass Bonanza?</h3><p className="mt-1 text-sm text-slate-600">4,000x your stake, achievable through accumulated multipliers during the free spins round.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Which casinos offer Big Bass Bonanza?</h3><p className="mt-1 text-sm text-slate-600">Big Bass Bonanza is available at most online casinos. Top picks include Stake, BC.Game, and Jackpot City. Browse our full casino reviews and Pragmatic Play casinos guide for more options.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Big Bass Bonanza available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, Big Bass Bonanza is fully optimised for mobile through HTML5 technology.</p></div>
           </div>
         </div>
         

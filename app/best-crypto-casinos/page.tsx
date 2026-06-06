@@ -6,7 +6,18 @@ export const metadata = {
 };
 
 export default function CategoryPage() {
-  const items = [['Jackpot City', '9.5', '$1,600', 'jackpot-city-casino'], ['Spin Casino', '9.3', '$1,000', 'spin-casino'], ['Ruby Fortune', '9.1', '$750', 'ruby-fortune-casino'], ['LeoVegas', '9.4', '$1,000', 'leovegas'], ['BitStarz', '9.7', '5 BTC', 'bitstarz'], ['Stake', '8.8', 'Crypto', 'stake']];
+  const items = [
+    ['BitStarz', '9.7', '5 BTC', 'bitstarz'],
+    ['BC.Game', '9.4', '$200K + 500 FS', 'bc-game'],
+    ['LeoVegas', '9.4', '$1,000', 'leovegas'],
+    ['Jackpot City', '9.5', '$1,600', 'jackpot-city-casino'],
+    ['Spin Casino', '9.3', '$1,000', 'spin-casino'],
+    ['Stake', '8.8', 'Crypto', 'stake'],
+    ['FortuneJack', '8.5', '1.5 BTC + 250 FS', 'fortunejack'],
+    ['1Win', '8.2', '$10,000', '1win'],
+    ['PureOdds', '7.8', '1 BTC', 'pureodds'],
+    ['Ruby Fortune', '9.1', '$750', 'ruby-fortune-casino'],
+  ];
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-10 text-center">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Blackjack Tips 2026 — 8 Practical Tips to Win More & Play Smarter | Royal Bet Guide",
+  title: "Blackjack Tips 2026 — 8 Practical Tips to Win More & Play Smarter",
   description: "8 essential blackjack tips: learn basic strategy, find 3:2 tables, avoid insurance and side bets, manage your bankroll, use strategy charts, and practice with free games first.",
   alternates: { canonical: "https://royalbetguide.com/guides/blackjack/tips/" },
 };

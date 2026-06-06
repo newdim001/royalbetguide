@@ -72,13 +72,14 @@ export default function SevenBitCasinoEsPage() {
       { "@type": "Question", name: "¿Tiene programa de fidelidad?", acceptedAnswer: { "@type": "Answer", text: "Sí, ofrece un excelente programa VIP con bonos exclusivos, retiros más rápidos y gestores personales." } },
     ],
   };
-  const productSchema = {
+    const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Organization",
     name: c.name,
+    image: "https://royalbetguide.com/og/7bit-casino.png",
     description: "7BitCasino Reseña 2026 - 5 BTC + 250 Giros Gratis, 7000+ juegos, 97.6% RTP.",
     aggregateRating: { "@type": "AggregateRating", ratingValue: "9.4", bestRating: "10", worstRating: "0", ratingCount: "1" },
-    offers: { "@type": "Offer", name: "5 BTC + 250 Giros Gratis", description: "Paquete de bienvenida" },
+    
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -91,7 +92,7 @@ export default function SevenBitCasinoEsPage() {
   };
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, productSchema, breadcrumbSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, organizationSchema, breadcrumbSchema]) }} />
       <div className="mb-6 rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">
         Podemos ganar una comisión si te registras a través de nuestros enlaces. Juega con responsabilidad. 18+
       </div>

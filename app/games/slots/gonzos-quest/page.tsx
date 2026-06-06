@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Gonzo\'s Quest Slot 2026 — Avalanche Mechanic & Free Falls | Royal Bet Guide",
+  title: "Gonzo\'s Quest Slot 2026 — Avalanche Mechanic & Free Falls",
   description: "Complete Gonzo\'s Quest slot review by NetEnt. RTP 95.97%, medium volatility, revolutionary Avalanche mechanic with increasing multipliers up to 15x. Find the best casinos to play.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/gonzos-quest/",
@@ -31,6 +31,23 @@ export default function GonzosQuestPage() {
             offers: { "@type": "Offer", price: "0.20", priceCurrency: "USD" },
             author: { "@type": "Person", name: "Daniel Johnson" },
             aggregateRating: { "@type": "AggregateRating", ratingValue: "8.5", bestRating: "10", ratingCount: "1" }
+          }, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Gonzo's Quest?", acceptedAnswer: { "@type": "Answer", text: "The RTP is 95.97%, which is standard for a medium-volatility slot from this era." } },
+              { "@type": "Question", name: "Is Gonzo's Quest high volatility?", acceptedAnswer: { "@type": "Answer", text: "No, Gonzo's Quest is a medium-volatility slot. It offers a balanced mix of win frequency and payout size, making it suitable for a wide range of players." } },
+              { "@type": "Question", name: "Can I play Gonzo's Quest for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Gonzo's Quest. We recommend trying the demo to experience the Avalanche mechanic and Free Falls bonus before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Gonzo's Quest?", acceptedAnswer: { "@type": "Answer", text: "The maximum win is 2,500x your stake, achievable during the Free Falls bonus round with 15x multipliers." } },
+              { "@type": "Question", name: "Which casinos offer Gonzo's Quest?", acceptedAnswer: { "@type": "Answer", text: "Gonzo's Quest is available at many top online casinos. Our top picks include Jackpot City, Spin Casino, and LeoVegas. Browse our full casino reviews and NetEnt casinos guide for more options." } },
+              { "@type": "Question", name: "Is Gonzo's Quest available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Gonzo's Quest is fully optimised for all iOS and Android devices through HTML5 technology." } }
+            ]
           }, null, 2)
         }}
       />
@@ -65,10 +82,12 @@ export default function GonzosQuestPage() {
         <div className="card-light mb-8">
           <h2 className="text-xl font-bold text-corg-600">Frequently Asked Questions</h2>
           <div className="mt-4 space-y-4">
-            <div><h3 className="font-semibold text-corg-600">What is the RTP of Gonzo&#x27;s Quest?</h3><p className="mt-1 text-sm text-slate-600">The RTP is 95.97%, which is standard for a medium-volatility slot from this era.</p></div>
-            <div><h3 className="font-semibold text-corg-600">What is the maximum win in Gonzo&#x27;s Quest?</h3><p className="mt-1 text-sm text-slate-600">The maximum win is 2,500x your stake, achievable during the Free Falls bonus round with 15x multipliers.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Is there a sequel to Gonzo&#x27;s Quest?</h3><p className="mt-1 text-sm text-slate-600">Yes! Gonzo&#x27;s Quest Megaways was released in 2020, featuring the Megaways mechanic and even bigger win potential.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Is Gonzo&#x27;s Quest available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, it is fully optimised for all iOS and Android devices through HTML5 technology.</p></div>
+            <div><h3 className="font-semibold text-corg-600">What is the RTP of Gonzo's Quest?</h3><p className="mt-1 text-sm text-slate-600">The RTP is 95.97%, which is standard for a medium-volatility slot from this era.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Gonzo's Quest high volatility?</h3><p className="mt-1 text-sm text-slate-600">No, Gonzo's Quest is a medium-volatility slot. It offers a balanced mix of win frequency and payout size, making it suitable for a wide range of players.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Can I play Gonzo's Quest for free?</h3><p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version of Gonzo's Quest. We recommend trying the demo to experience the Avalanche mechanic and Free Falls bonus before playing with real money.</p></div>
+            <div><h3 className="font-semibold text-corg-600">What is the max win on Gonzo's Quest?</h3><p className="mt-1 text-sm text-slate-600">The maximum win is 2,500x your stake, achievable during the Free Falls bonus round with 15x multipliers.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Which casinos offer Gonzo's Quest?</h3><p className="mt-1 text-sm text-slate-600">Gonzo's Quest is available at many top online casinos. Our top picks include Jackpot City, Spin Casino, and LeoVegas. Browse our full casino reviews and NetEnt casinos guide for more options.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Gonzo's Quest available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, Gonzo's Quest is fully optimised for all iOS and Android devices through HTML5 technology.</p></div>
           </div>
         </div>
         

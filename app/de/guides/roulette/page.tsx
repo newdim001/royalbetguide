@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Roulette Online 2026 – Varianten, Strategien und Tipps | Royal Bet Guide",
+  title: "Roulette Online 2026 – Varianten, Strategien und Tipps",
   description: "Roulette Online 2026: Europäisches, amerikanisches und französisches Roulette im Vergleich mit Strategien und Quoten.",
   alternates: { canonical: "https://royalbetguide.com/de/guides/roulette/" },
 };

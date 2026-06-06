@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Dead or Alive 2 Slot 2026 — 100,000x Max Win | Royal Bet Guide",
+  title: "Dead or Alive 2 Slot 2026 — 100,000x Max Win",
   description: "Complete Dead or Alive 2 slot review by NetEnt. RTP 96.82%, very high volatility, 100,000x max win potential, three unique free spins modes. Find the best casinos to play.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/dead-or-alive-2/",
@@ -31,6 +31,23 @@ export default function DeadOrAlive2Page() {
             offers: { "@type": "Offer", price: "0.20", priceCurrency: "USD" },
             author: { "@type": "Person", name: "Andrew Mitchell" },
             aggregateRating: { "@type": "AggregateRating", ratingValue: "8.5", bestRating: "10", ratingCount: "1" }
+          }, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Dead or Alive 2?", acceptedAnswer: { "@type": "Answer", text: "96.82%, which is excellent for a very high volatility slot." } },
+              { "@type": "Question", name: "Is Dead or Alive 2 high volatility?", acceptedAnswer: { "@type": "Answer", text: "Yes, Dead or Alive 2 is a very high volatility slot. Wins can be extremely rare, but the potential for massive payouts — up to 100,000x your stake — makes it a favourite among high-risk players." } },
+              { "@type": "Question", name: "Can I play Dead or Alive 2 for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version. We recommend practising in demo mode to understand the three unique free spins modes before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Dead or Alive 2?", acceptedAnswer: { "@type": "Answer", text: "100,000x your stake, one of the highest max wins available from any NetEnt slot." } },
+              { "@type": "Question", name: "Which casinos offer Dead or Alive 2?", acceptedAnswer: { "@type": "Answer", text: "Dead or Alive 2 is available at many top online casinos. Our top picks include Jackpot City, Spin Casino, and LeoVegas. Browse our full casino reviews and NetEnt casinos guide for more options." } },
+              { "@type": "Question", name: "Is Dead or Alive 2 available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Dead or Alive 2 is fully optimised for mobile through HTML5 technology." } }
+            ]
           }, null, 2)
         }}
       />
@@ -66,9 +83,11 @@ export default function DeadOrAlive2Page() {
           <h2 className="text-xl font-bold text-corg-600">Frequently Asked Questions</h2>
           <div className="mt-4 space-y-4">
             <div><h3 className="font-semibold text-corg-600">What is the RTP of Dead or Alive 2?</h3><p className="mt-1 text-sm text-slate-600">96.82%, which is excellent for a very high volatility slot.</p></div>
-            <div><h3 className="font-semibold text-corg-600">What is the maximum win in Dead or Alive 2?</h3><p className="mt-1 text-sm text-slate-600">100,000x your stake, one of the highest max wins available from any NetEnt slot.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Which free spins mode should I choose?</h3><p className="mt-1 text-sm text-slate-600">Old Saloon for steady play, High Noon for balanced wins, Train Robbery for the 100,000x max win chase.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Is Dead or Alive 2 available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, fully optimised for mobile through HTML5 technology.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Dead or Alive 2 high volatility?</h3><p className="mt-1 text-sm text-slate-600">Yes, Dead or Alive 2 is a very high volatility slot. Wins can be extremely rare, but the potential for massive payouts — up to 100,000x your stake — makes it a favourite among high-risk players.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Can I play Dead or Alive 2 for free?</h3><p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version. We recommend practising in demo mode to understand the three unique free spins modes before playing with real money.</p></div>
+            <div><h3 className="font-semibold text-corg-600">What is the max win on Dead or Alive 2?</h3><p className="mt-1 text-sm text-slate-600">100,000x your stake, one of the highest max wins available from any NetEnt slot.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Which casinos offer Dead or Alive 2?</h3><p className="mt-1 text-sm text-slate-600">Dead or Alive 2 is available at many top online casinos. Our top picks include Jackpot City, Spin Casino, and LeoVegas. Browse our full casino reviews and NetEnt casinos guide for more options.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Dead or Alive 2 available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, Dead or Alive 2 is fully optimised for mobile through HTML5 technology.</p></div>
           </div>
         </div>
         

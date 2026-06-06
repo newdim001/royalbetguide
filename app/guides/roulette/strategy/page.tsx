@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Roulette Strategy 2026 — Betting Systems & Tips to Win | Royal Bet Guide",
+  title: "Roulette Strategy 2026 — Betting Systems & Tips to Win",
   description: "Complete roulette strategy guide for 2026. Learn the Martingale, Fibonacci, D\'Alembert, and Labouchere systems. Understand European vs American roulette odds and find the best casinos.",
   alternates: { canonical: "https://royalbetguide.com/guides/roulette/strategy/" },
 };

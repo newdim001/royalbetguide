@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Royal Bet Guide",
   },
   description:
-    "Expert casino and betting reviews since 2026. Compare top online casinos, claim exclusive bonuses, and read trusted guides by industry experts.",
+    "Expert casino and betting reviews. Compare top online casinos, claim exclusive bonuses, and read trusted guides by industry experts.",
   openGraph: {
     siteName: "Royal Bet Guide",
     type: "website",
@@ -69,12 +69,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         {/* Hreflang tags */}
-        <link rel="alternate" href="https://royalbetguide.com" hreflang="en" />
-        <link rel="alternate" href="https://royalbetguide.com/de" hreflang="de" />
-        <link rel="alternate" href="https://royalbetguide.com/fr" hreflang="fr" />
-        <link rel="alternate" href="https://royalbetguide.com/es" hreflang="es" />
-        <link rel="alternate" href="https://royalbetguide.com/it" hreflang="it" />
-        <link rel="alternate" href="https://royalbetguide.com" hreflang="x-default" />
+        <link rel="alternate" href="https://royalbetguide.com" hrefLang="en" />
+        <link rel="alternate" href="https://royalbetguide.com/de" hrefLang="de" />
+        <link rel="alternate" href="https://royalbetguide.com/fr" hrefLang="fr" />
+        <link rel="alternate" href="https://royalbetguide.com/es" hrefLang="es" />
+        <link rel="alternate" href="https://royalbetguide.com/it" hrefLang="it" />
+        <link rel="alternate" href="https://royalbetguide.com" hrefLang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([orgSchema, websiteSchema]) }}
@@ -85,8 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('create', 'G-W4Y4QR2FTW', 'auto');
-          gtag('send', 'pageview');`}
+          gtag('config', 'G-W4Y4QR2FTW');`}
         </Script>
       </head>
       <body className="min-h-screen flex flex-col">

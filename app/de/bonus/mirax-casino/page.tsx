@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mirax Casino Bonus 2026 - $500 + 200 Freispiele sichern | Royal Bet Guide",
+  title: "Mirax Casino Bonus 2026 - $500 + 200 Freispiele sichern",
   description:
     "Mirax Casino Bonus 2026: Sichere Dir $500 + 200 Freispiele Willkommenspaket. Cashback-Angebote, Umsatzbedingungen und Schritt-für-Schritt-Anleitung – Jetzt exklusiv sichern!",
   alternates: { canonical: "https://royalbetguide.com/de/bonus/mirax-casino/" },
@@ -19,16 +19,11 @@ const AFFILIATE_URL = "https://mirax.partners/pyklyuxbk";
 export default function MiraxBonusDePage() {
   const bonusSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Organization",
     name: "MiraxCasino Willkommensbonus 2026",
+    image: "https://royalbetguide.com/og/mirax-casino.png",
     description: "$500 + 200 Freispiele Willkommenspaket bei MiraxCasino",
-    offers: {
-      "@type": "Offer",
-      name: "$500 + 200 Freispiele",
-      description:
-        "$500 Willkommensbonus + 200 Freispiele. 35-fache Umsatzbedingung. Nur für Neukunden. 18+",
-      url: AFFILIATE_URL,
-    },
+    
   };
 
   return (

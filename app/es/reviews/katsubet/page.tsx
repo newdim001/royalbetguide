@@ -49,7 +49,15 @@ export default function KatsuBetEsPage() {
     { "@type": "Question", name: "¿Versión móvil?", acceptedAnswer: { "@type": "Answer", text: "Completamente optimizado para iOS y Android." } },
     { "@type": "Question", name: "¿Programa VIP?", acceptedAnswer: { "@type": "Answer", text: "Sí, varios niveles con bonos exclusivos y retiros más rápidos." } },
   ]};
-  const productSchema = { "@context": "https://schema.org", "@type": "Product", name: c.name, description: "KatsuBet Casino Reseña 2026 - 325% + 200 Giros Gratis, 7000+ juegos, 96.4% RTP.", aggregateRating: { "@type": "AggregateRating", ratingValue: "8.3", bestRating: "10", worstRating: "0", ratingCount: "1" }, offers: { "@type": "Offer", name: "325% + 200 Giros Gratis", description: "Paquete de bienvenida" } };
+    const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: c.name,
+    image: "https://royalbetguide.com/og/katsubet.png",
+    description: "KatsuBet Casino Reseña 2026 - 325% + 200 Giros Gratis, 7000+ juegos, 96.4% RTP.",
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "8.3", bestRating: "10", worstRating: "0", ratingCount: "1" },
+    
+  };
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://royalbetguide.com/es/" },
     { "@type": "ListItem", position: 2, name: "Reseñas", item: "https://royalbetguide.com/es/reviews/" },
@@ -64,7 +72,7 @@ export default function KatsuBetEsPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, productSchema, breadcrumbSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([reviewSchema, faqSchema, organizationSchema, breadcrumbSchema]) }} />
       <div className="mb-6 rounded-lg border border-gold-400/20 bg-gold-400/5 px-4 py-2 text-center text-xs text-slate-500">
         Podemos ganar una comisión si te registras a través de nuestros enlaces. Juega con responsabilidad. 18+
       </div>

@@ -247,6 +247,11 @@ export default function USCasinosPage() {
         </div>
       </div>
 
+      {/* State Availability Warning */}
+      <div className="mb-8 rounded-lg border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-center text-sm text-amber-800">
+        <strong>⚠️ Important:</strong> State-regulated casinos below are only available in select US states where online gambling is legally permitted (NJ, PA, MI, WV, CT, DE, and others). Availability varies by operator and state. Please verify your state's laws before signing up.
+      </div>
+
       {/* Categories */}
       <div className="mb-8 flex flex-wrap gap-3">
         <span className="rounded-full bg-corg-500/10 px-4 py-2 text-sm font-medium text-corg-600">

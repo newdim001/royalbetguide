@@ -75,7 +75,7 @@ export default function SweepstakesPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">
-            ★ Top Rated Sweepstakes Casinos 2026
+            ★ Top Rated Sweepstakes Casinos
           </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-corg-600 sm:text-4xl">
             Best Sweepstakes Casinos

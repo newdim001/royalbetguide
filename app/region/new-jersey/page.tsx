@@ -14,6 +14,9 @@ export default function NewJerseyPage() {
         <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-corg-600">Best New Jersey Online Casinos 2026</h1>
         <p className="mt-2 text-slate-500">Legal, licensed, and trusted online casinos for NJ players</p>
       </div>
+      <div className="mb-8 rounded-lg border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-center text-sm text-amber-800">
+        <strong>⚠️ NJ Only:</strong> The casinos listed on this page are only available to players physically located within New Jersey state borders. You must be 21+ and within NJ to play.
+      </div>
       <div className="card-light mb-8">
         <p className="text-slate-700 leading-relaxed">New Jersey has one of the most mature and well-regulated online gambling markets in the United States. Since the legalization of online casino gaming in 2013, the Garden State has become a model for other states considering online gambling legislation. NJ players have access to a wide range of legal, licensed online casinos offering slots, table games, live dealer experiences, and sports betting.</p>
         <p className="mt-3 text-slate-700 leading-relaxed">All online casinos operating in New Jersey are licensed by the New Jersey Division of Gaming Enforcement (NJDGE), ensuring strict oversight, fair play, player protection, and tax compliance. NJ-licensed casinos must use certified Random Number Generators (RNGs), undergo regular audits, and provide responsible gambling tools including deposit limits, self-exclusion, and reality checks.</p>

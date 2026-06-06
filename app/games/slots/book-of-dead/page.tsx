@@ -34,6 +34,23 @@ export default function BookOfDeadPage() {
           }, null, 2)
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Book of Dead?", acceptedAnswer: { "@type": "Answer", text: "The standard RTP is 96.21%. Some casino operators may offer lower RTP versions, so check the game's paytable before playing." } },
+              { "@type": "Question", name: "Is Book of Dead high volatility?", acceptedAnswer: { "@type": "Answer", text: "Yes, Book of Dead is a high-volatility slot. Wins are less frequent but larger on average, making it best suited to players with a moderate-to-large bankroll." } },
+              { "@type": "Question", name: "Can I play Book of Dead for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version. We recommend practising in demo mode to understand the bonus mechanics before playing with real money." } },
+              { "@type": "Question", name: "What is the max win on Book of Dead?", acceptedAnswer: { "@type": "Answer", text: "The maximum win is 5,000x your total stake, achievable during the free spins round when the chosen expanding symbol fills multiple reels." } },
+              { "@type": "Question", name: "Which casinos offer Book of Dead?", acceptedAnswer: { "@type": "Answer", text: "Book of Dead is available at thousands of online casinos worldwide. Top recommendations include LeoVegas, Jackpot City, and Spin Casino. Browse our full casino reviews for more options." } },
+              { "@type": "Question", name: "Is Book of Dead available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Play'n GO designs mobile-first. Book of Dead is fully optimised for all smartphones and tablets with no app required." } }
+            ]
+          }, null, 2)
+        }}
+      />
 <article>
         <div className="mb-10 text-center">
           <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">Slot Guide</span>
@@ -102,20 +119,24 @@ export default function BookOfDeadPage() {
               <p className="mt-1 text-sm text-slate-600">The standard RTP is 96.21%. Some casino operators may offer lower RTP versions, so check the game's paytable before playing.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-corg-600">What is the max win in Book of Dead?</h3>
-              <p className="mt-1 text-sm text-slate-600">The maximum win is 5,000x your total stake, achievable during the free spins round when the chosen expanding symbol fills multiple reels.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-corg-600">How do you trigger free spins in Book of Dead?</h3>
-              <p className="mt-1 text-sm text-slate-600">Land three or more Book scatter symbols anywhere on the reels to trigger 10 free spins. The bonus can be retriggered.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-corg-600">Is Book of Dead available on mobile?</h3>
-              <p className="mt-1 text-sm text-slate-600">Yes, Play'n GO designs mobile-first. Book of Dead is fully optimised for all smartphones and tablets with no app required.</p>
+              <h3 className="font-semibold text-corg-600">Is Book of Dead high volatility?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, Book of Dead is a high-volatility slot. Wins are less frequent but larger on average, making it best suited to players with a moderate-to-large bankroll.</p>
             </div>
             <div>
               <h3 className="font-semibold text-corg-600">Can I play Book of Dead for free?</h3>
               <p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version. We recommend practising in demo mode to understand the bonus mechanics before playing with real money.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">What is the max win on Book of Dead?</h3>
+              <p className="mt-1 text-sm text-slate-600">The maximum win is 5,000x your total stake, achievable during the free spins round when the chosen expanding symbol fills multiple reels.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">Which casinos offer Book of Dead?</h3>
+              <p className="mt-1 text-sm text-slate-600">Book of Dead is available at thousands of online casinos worldwide. Top recommendations include LeoVegas, Jackpot City, and Spin Casino. Browse our full casino reviews for more options.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-corg-600">Is Book of Dead available on mobile?</h3>
+              <p className="mt-1 text-sm text-slate-600">Yes, Play'n GO designs mobile-first. Book of Dead is fully optimised for all smartphones and tablets with no app required.</p>
             </div>
           </div>
         </div>

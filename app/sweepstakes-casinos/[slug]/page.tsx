@@ -342,15 +342,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         },
         {
           "@context": "https://schema.org",
-          "@type": "Product",
+          "@type": "Organization",
           name: casino.name + " Sweepstakes Casino",
           description: casino.description,
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-            description: casino.bonus,
-          },
+          
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: casino.rating.toString(),

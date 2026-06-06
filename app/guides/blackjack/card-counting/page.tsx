@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Blackjack Card Counting 2026 — Hi-Lo System & Counting Guide | Royal Bet Guide",
+  title: "Blackjack Card Counting 2026 — Hi-Lo System & Counting Guide",
   description: "Learn how to count cards in blackjack. Complete guide to the Hi-Lo counting system, true count conversion, betting strategy, and staying undetected at online and live casinos.",
   alternates: { canonical: "https://royalbetguide.com/guides/blackjack/card-counting/" },
 };

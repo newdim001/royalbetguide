@@ -2,7 +2,7 @@ import Link from "next/link";
 import GameDemoEmbed from "@/components/GameDemoEmbed";
 
 export const metadata = {
-  title: "Sweet Bonanza Slot 2026 — Play Sweet Bonanza Online | Royal Bet Guide",
+  title: "Sweet Bonanza Slot 2026 — Play Sweet Bonanza Online",
   description: "Complete Sweet Bonanza slot review. RTP 96.48%, high volatility, tumbling reels with increasing multipliers, max win 21,100x. Find the best casinos to play Sweet Bonanza.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/sweet-bonanza/",
@@ -32,6 +32,23 @@ export default function SweetBonanzaPage() {
             offers: { "@type": "Offer", price: "0.20", priceCurrency: "USD" },
             author: { "@type": "Person", name: "Christopher Parker" },
             aggregateRating: { "@type": "AggregateRating", ratingValue: "8.5", bestRating: "10", ratingCount: "1" }
+          }, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "What is the RTP of Sweet Bonanza?", acceptedAnswer: { "@type": "Answer", text: "The RTP is 96.48%, placing it above the industry average for online slots." } },
+              { "@type": "Question", name: "Is Sweet Bonanza high volatility?", acceptedAnswer: { "@type": "Answer", text: "Yes, Sweet Bonanza is a high-volatility slot. Wins can be less frequent but the tumbling reels and multiplier bombs offer the potential for very large payouts." } },
+              { "@type": "Question", name: "Can I play Sweet Bonanza for free?", acceptedAnswer: { "@type": "Answer", text: "Yes, most casinos offer a free demo version of Sweet Bonanza. We recommend trying the demo to get familiar with the tumbling reels and multiplier mechanics before wagering real money." } },
+              { "@type": "Question", name: "What is the max win on Sweet Bonanza?", acceptedAnswer: { "@type": "Answer", text: "The maximum win is 21,100x your stake, achievable during the free spins round with high multipliers." } },
+              { "@type": "Question", name: "Which casinos offer Sweet Bonanza?", acceptedAnswer: { "@type": "Answer", text: "Sweet Bonanza is widely available at most online casinos. Our top picks include Stake, BC.Game, and Jackpot City. See our full casino reviews and Pragmatic Play casinos guide for more options." } },
+              { "@type": "Question", name: "Is Sweet Bonanza available on mobile?", acceptedAnswer: { "@type": "Answer", text: "Yes, Sweet Bonanza is fully optimised for all mobile devices through HTML5 technology." } }
+            ]
           }, null, 2)
         }}
       />
@@ -68,8 +85,10 @@ export default function SweetBonanzaPage() {
           <h2 className="text-xl font-bold text-corg-600">Frequently Asked Questions</h2>
           <div className="mt-4 space-y-4">
             <div><h3 className="font-semibold text-corg-600">What is the RTP of Sweet Bonanza?</h3><p className="mt-1 text-sm text-slate-600">The RTP is 96.48%, placing it above the industry average for online slots.</p></div>
-            <div><h3 className="font-semibold text-corg-600">What is the maximum win in Sweet Bonanza?</h3><p className="mt-1 text-sm text-slate-600">The maximum win is 21,100x your stake, achievable during the free spins round with high multipliers.</p></div>
-            <div><h3 className="font-semibold text-corg-600">Can I buy the bonus feature in Sweet Bonanza?</h3><p className="mt-1 text-sm text-slate-600">Yes, where regulations permit, you can buy direct entry into free spins for 100x your current bet.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Is Sweet Bonanza high volatility?</h3><p className="mt-1 text-sm text-slate-600">Yes, Sweet Bonanza is a high-volatility slot. Wins can be less frequent but the tumbling reels and multiplier bombs offer the potential for very large payouts.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Can I play Sweet Bonanza for free?</h3><p className="mt-1 text-sm text-slate-600">Yes, most casinos offer a free demo version of Sweet Bonanza. We recommend trying the demo to get familiar with the tumbling reels and multiplier mechanics before wagering real money.</p></div>
+            <div><h3 className="font-semibold text-corg-600">What is the max win on Sweet Bonanza?</h3><p className="mt-1 text-sm text-slate-600">The maximum win is 21,100x your stake, achievable during the free spins round with high multipliers.</p></div>
+            <div><h3 className="font-semibold text-corg-600">Which casinos offer Sweet Bonanza?</h3><p className="mt-1 text-sm text-slate-600">Sweet Bonanza is widely available at most online casinos. Our top picks include Stake, BC.Game, and Jackpot City. See our full casino reviews and Pragmatic Play casinos guide for more options.</p></div>
             <div><h3 className="font-semibold text-corg-600">Is Sweet Bonanza available on mobile?</h3><p className="mt-1 text-sm text-slate-600">Yes, Sweet Bonanza is fully optimised for all mobile devices through HTML5 technology.</p></div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import CasinoLogo from "../../../components/CasinoLogo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "7BitCasino vs KatsuBet vs MiraxCasino - Vergleich 2026 | Royal Bet Guide",
+  title: "7BitCasino vs KatsuBet vs MiraxCasino - Vergleich 2026",
   description:
     "7BitCasino, KatsuBet und MiraxCasino im direkten Vergleich 2026: Boni, Spiele, Auszahlungsraten, Lizenzen und Zahlungsmethoden. Finde das beste Casino für Dich!",
   alternates: { canonical: "https://royalbetguide.com/de/compare/7bit-katsubet-mirax/" },

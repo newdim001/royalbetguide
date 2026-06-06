@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Play Blackjack 2026 — Rules, Card Values & Dealing | Royal Bet Guide",
+  title: "How to Play Blackjack 2026 — Rules, Card Values & Dealing",
   description: "Learn how to play blackjack in 2026. Complete beginner\'s guide covering rules, card values, dealing procedure, basic strategy, and finding the best casinos. Start playing in minutes.",
   alternates: { canonical: "https://royalbetguide.com/guides/blackjack/how-to-play/" },
 };

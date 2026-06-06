@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Migliori RTP Slot 2026 \u2013 Top 10 con le Migliori Percentuali di Pagamento | Royal Bet Guide",
+  title: "Migliori RTP Slot 2026 \u2013 Top 10 con le Migliori Percentuali di Pagamento",
   description:
     "I migliori RTP slot 2026: Starburst, Book of Dead, Gates of Olympus e altri. RTP fino al 99%. Con consigli di gioco e raccomandazioni casino.",
   alternates: { canonical: "https://royalbetguide.com/it/blog/migliori-rtp-slot-2026/" },

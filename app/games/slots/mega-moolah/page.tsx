@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Mega Moolah Slot 2026 — Progressive Jackpot Guide & RTP 88.12% | Royal Bet Guide",
+  title: "Mega Moolah Slot 2026 — Progressive Jackpot Guide & RTP 88.12%",
   description: "Complete Mega Moolah slot guide by Microgaming. RTP 88.12%, progressive jackpot 4 tiers, Medium-High volatility, record €23.6M win. Where to play in 2026.",
   openGraph: {
     url: "https://royalbetguide.com/games/slots/mega-moolah/",
