@@ -1077,6 +1077,9 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       </div>
 
       {/* Hero Card */}
+      <div className="mb-6 text-sm text-slate-400">
+        By {getAuthorName(casino.name)} — Updated June 2026
+      </div>
       <div className="rounded-xl bg-gradient-to-br from-corg-500 to-corg-600 p-6 sm:p-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">

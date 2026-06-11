@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Script from "next/script";
 import CookieConsent from "./components/CookieConsent";
+import HreflangLinks from "./components/HreflangLinks";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://royalbetguide.com"),
@@ -24,16 +25,6 @@ export const metadata: Metadata = {
     apple: "/logo.svg",
   },
   robots: { index: true, follow: true },
-  alternates: {
-    languages: {
-      en: "https://royalbetguide.com",
-      de: "https://royalbetguide.com/de",
-      fr: "https://royalbetguide.com/fr",
-      es: "https://royalbetguide.com/es",
-      it: "https://royalbetguide.com/it",
-      "x-default": "https://royalbetguide.com",
-    },
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -68,13 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Hreflang tags */}
-        <link rel="alternate" href="https://royalbetguide.com" hrefLang="en" />
-        <link rel="alternate" href="https://royalbetguide.com/de" hrefLang="de" />
-        <link rel="alternate" href="https://royalbetguide.com/fr" hrefLang="fr" />
-        <link rel="alternate" href="https://royalbetguide.com/es" hrefLang="es" />
-        <link rel="alternate" href="https://royalbetguide.com/it" hrefLang="it" />
-        <link rel="alternate" href="https://royalbetguide.com" hrefLang="x-default" />
+        {/* Dynamic hreflang tags */}
+        <HreflangLinks />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([orgSchema, websiteSchema]) }}

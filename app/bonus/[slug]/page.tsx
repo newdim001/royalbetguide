@@ -486,6 +486,37 @@ export default async function BonusDetailPage({ params }: { params: Promise<{ sl
         </ul>
       </div>
 
+      {/* FAQ */}
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
+        <h2 className="text-lg font-bold text-corg-600">Frequently Asked Questions</h2>
+        <div className="mt-4 space-y-4" itemScope itemType="https://schema.org/FAQPage">
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+            <h3 itemProp="name" className="font-semibold text-slate-800">What is the wagering requirement for this bonus?</h3>
+            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div itemProp="text" className="mt-1 text-sm text-slate-600">The wagering requirement is {bonus.wagering}. This means you must wager the bonus amount {bonus.wagering.toLowerCase().replace("x", "")} times before you can withdraw any winnings. Slots typically contribute 100% towards wagering, while table games may contribute less.</div>
+            </div>
+          </div>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+            <h3 itemProp="name" className="font-semibold text-slate-800">Is a bonus code required?</h3>
+            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div itemProp="text" className="mt-1 text-sm text-slate-600">{bonus.code === "No code needed" || !bonus.code ? "No bonus code is required. The bonus is automatically credited when you make your qualifying deposit." : `Yes, you need to enter the bonus code <strong>${bonus.code}</strong> when making your deposit.`}</div>
+            </div>
+          </div>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+            <h3 itemProp="name" className="font-semibold text-slate-800">Can I withdraw the bonus immediately?</h3>
+            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div itemProp="text" className="mt-1 text-sm text-slate-600">No, bonus funds are subject to wagering requirements. You must meet the {bonus.wagering} wagering requirement before any bonus winnings can be withdrawn. Always read the full terms and conditions for game contribution rates and expiry dates.</div>
+            </div>
+          </div>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+            <h3 itemProp="name" className="font-semibold text-slate-800">What is the minimum deposit to claim this bonus?</h3>
+            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div itemProp="text" className="mt-1 text-sm text-slate-600">The minimum deposit required to claim this bonus is {bonus.minDeposit}. Deposits below this amount will not qualify for the bonus offer.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CTA */}
       <div className="mt-10 rounded-2xl bg-gradient-to-br from-gold-500 to-corg-500 p-8 text-center">
         <h3 className="text-xl font-bold text-white">Ready to Claim {bonus.bonus}?</h3>
