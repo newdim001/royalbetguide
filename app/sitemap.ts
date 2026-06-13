@@ -300,6 +300,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/reviews/${slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
+      lastModified: new Date().toISOString().split("T")[0],
     });
   }
 
@@ -309,6 +310,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/bonus/${slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
+      lastModified: new Date().toISOString().split("T")[0],
     });
   }
 

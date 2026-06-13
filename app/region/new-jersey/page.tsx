@@ -8,8 +8,72 @@ export const metadata = {
 };
 
 export default function NewJerseyPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is online casino gambling legal in New Jersey?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, online casino gambling is fully legal in New Jersey. It was legalized in February 2013 through the New Jersey Internet Gaming Law, with the first sites launching in November 2013. All NJ online casinos are regulated by the New Jersey Division of Gaming Enforcement (NJDGE) and must partner with a licensed Atlantic City casino.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the best online casino in New Jersey?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The best NJ online casino depends on your preferences. BetMGM offers the highest game variety with 2,000+ titles and a $1,500 welcome bonus. Caesars provides a $2,500 bonus with the valuable Caesars Rewards program. DraftKings is excellent for players who also want sports betting with seamless integration. Golden Nugget has one of the best mobile apps in the state.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I play NJ online casinos on my phone?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, all NJ-licensed online casinos offer dedicated iOS and Android apps available for download from official app stores. The apps use geolocation to confirm you are physically within New Jersey borders. The top apps — BetMGM, Caesars, DraftKings, and Golden Nugget — all receive 4.5–5 star ratings for their mobile experiences.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How old do I need to be to gamble online in New Jersey?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You must be at least 21 years old to play at any New Jersey online casino. This applies to all forms of online gambling including casino games, poker, and sports betting. Casinos verify your age during registration using your social security number and government-issued ID.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What payment methods do NJ online casinos accept?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "New Jersey online casinos accept Visa, Mastercard, American Express, PayPal, online bank transfer (ACH), Play+ prepaid cards, PayNearMe cash deposits, and venue cashier at Atlantic City casinos. PayPal is the most popular e-wallet option with the fastest withdrawal times, often processing within 24 hours.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are NJ online casino winnings taxable?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, online casino winnings are taxable at both the federal and state level in New Jersey. The casino will issue a W-2G form for winnings exceeding $1,200 from slots or $600 from table games. New Jersey taxes gambling winnings as income at the state's income tax rate. Consult a tax professional for your specific situation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long do withdrawals take from NJ online casinos?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "NJ online casino withdrawal times vary by method. PayPal withdrawals are typically processed within 24 hours. Online bank transfer (ACH) takes 2–3 business days. Play+ prepaid cards process within 24–48 hours. Venue cashier pickups at Atlantic City are available immediately. NJDGE regulations require all casinos to process withdrawal requests within 48 hours.",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="mb-10 text-center">
         <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">US State Guide</span>
         <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-corg-600">Best New Jersey Online Casinos 2026</h1>
@@ -115,7 +179,7 @@ export default function NewJerseyPage() {
         <h2 className="text-xl font-bold text-corg-600">How to Get Started in New Jersey</h2>
         <p className="mt-3 text-slate-700 leading-relaxed">To play at a New Jersey online casino, you must be physically located within state borders and be at least 21 years old. Registration requires providing your name, address, date of birth, and social security number for verification. Geolocation software confirms your location. After verification, you can deposit using credit cards, PayPal, online banking, or PayNearMe and start playing immediately.</p>
         <p className="mt-3 text-slate-700 leading-relaxed">Withdrawal options in NJ include PayPal (often same-day), online bank transfer (ACH), Play+ prepaid cards, venue cashier (at the associated Atlantic City casino), and check by mail. NJDGE regulations require all casinos to process withdrawal requests within 48 hours, and e-wallet withdrawals like PayPal are typically available within 24 hours.</p>
-        <p className="mt-3 text-slate-700 leading-relaxed">Browse our full collection of <Link href="/reviews/" className="text-corg-500 hover:underline">NJ casino reviews</Link> for detailed comparisons of every Garden State operator, including bonus terms, game libraries, payment processing times, and mobile app ratings.</p>
+        <p className="mt-3 text-slate-700 leading-relaxed">Browse our full collection of <Link href="/reviews/" className="text-corg-500 hover:underline">NJ casino reviews</Link> for detailed comparisons of every Garden State operator, including bonus terms, game libraries, payment processing times, and mobile app ratings. For NJ sports betting, see our <Link href="/sports/new-jersey-sportsbooks/" className="text-corg-500 hover:underline">New Jersey sportsbooks guide</Link>.</p>
       </div>
 
       <div className="card-light mb-8">
@@ -123,6 +187,40 @@ export default function NewJerseyPage() {
         <p className="mt-3 text-slate-700 leading-relaxed">New Jersey was the first state to legalize online casino gaming when Governor Chris Christie signed the New Jersey Internet Gaming Law in February 2013, with the first sites launching in November 2013. The <strong>New Jersey Division of Gaming Enforcement (NJDGE)</strong> oversees all regulated gambling, including online casinos, sports betting, and poker.</p>
         <p className="mt-3 text-slate-700 leading-relaxed">The NJDGE requires all online casino operators to partner with a licensed Atlantic City casino — a model that has successfully integrated the state's land-based casino industry with the digital market. New Jersey's regulatory framework has become the gold standard for US states considering online gambling legalization, with stringent player protection measures, mandatory game testing by independent labs (GLI, BMM Testlabs), and real-time monitoring of all gaming activity.</p>
         <p className="mt-3 text-slate-700 leading-relaxed">New Jersey taxes online casino revenue at 15% for gross revenues up to $2 million and 17.5% for revenues exceeding $2 million for internet gaming. Sports betting is taxed separately. Tax revenue funds programs for seniors and individuals with disabilities, as well as Atlantic City economic development initiatives.</p>
+      </div>
+
+      <div className="card-light mb-8">
+        <h2 className="text-xl font-bold text-corg-600">Frequently Asked Questions About NJ Online Casinos</h2>
+
+        <div className="mb-4 rounded-lg border border-slate-200 p-4">
+          <p className="font-semibold text-corg-600">Is online casino gambling legal in New Jersey?</p>
+          <p className="mt-1 text-sm text-slate-600">Yes, online casino gambling is fully legal in New Jersey. It was legalized in February 2013 through the New Jersey Internet Gaming Law, with the first sites launching in November 2013. All NJ online casinos are regulated by the New Jersey Division of Gaming Enforcement (NJDGE) and must partner with a licensed Atlantic City casino.</p>
+        </div>
+
+        <div className="mb-4 rounded-lg border border-slate-200 p-4">
+          <p className="font-semibold text-corg-600">What is the best online casino in New Jersey?</p>
+          <p className="mt-1 text-sm text-slate-600">The best NJ online casino depends on your preferences. BetMGM offers the highest game variety with 2,000+ titles and a $1,500 welcome bonus. Caesars provides a $2,500 bonus with the valuable Caesars Rewards program. DraftKings is excellent for players who also want sports betting with seamless integration. Golden Nugget has one of the best mobile apps in the state.</p>
+        </div>
+
+        <div className="mb-4 rounded-lg border border-slate-200 p-4">
+          <p className="font-semibold text-corg-600">What payment methods do NJ online casinos accept?</p>
+          <p className="mt-1 text-sm text-slate-600">New Jersey online casinos accept Visa, Mastercard, American Express, PayPal, online bank transfer (ACH), Play+ prepaid cards, PayNearMe cash deposits, and venue cashier at Atlantic City casinos. PayPal is the most popular e-wallet option with the fastest withdrawal times, often processing within 24 hours.</p>
+        </div>
+
+        <div className="mb-4 rounded-lg border border-slate-200 p-4">
+          <p className="font-semibold text-corg-600">How long do withdrawals take from NJ online casinos?</p>
+          <p className="mt-1 text-sm text-slate-600">NJ online casino withdrawal times vary by method. PayPal withdrawals typically process within 24 hours. Online bank transfer (ACH) takes 2–3 business days. Play+ prepaid cards process within 24–48 hours. Venue cashier pickups at Atlantic City are available immediately. NJDGE regulations require all casinos to process withdrawal requests within 48 hours.</p>
+        </div>
+
+        <div className="mb-4 rounded-lg border border-slate-200 p-4">
+          <p className="font-semibold text-corg-600">Are NJ online casino winnings taxable?</p>
+          <p className="mt-1 text-sm text-slate-600">Yes, online casino winnings are taxable at both the federal and state level in New Jersey. The casino will issue a W-2G form for winnings exceeding $1,200 from slots or $600 from table games. New Jersey taxes gambling winnings as income at the state's income tax rate. Consult a tax professional for your specific situation.</p>
+        </div>
+
+        <div className="mb-6 rounded-lg border border-slate-200 p-4">
+          <p className="font-semibold text-corg-600">Can I play NJ online casinos on my phone?</p>
+          <p className="mt-1 text-sm text-slate-600">Yes, all NJ-licensed online casinos offer dedicated iOS and Android apps available for download from official app stores. The apps use geolocation to confirm you are physically within New Jersey borders. The top apps — BetMGM, Caesars, DraftKings, and Golden Nugget — all receive 4.5–5 star ratings for their mobile experiences. For sports betting on mobile, see our <Link href="/sports/new-jersey-sportsbooks/" className="text-corg-500 hover:underline">NJ sportsbooks guide</Link>.</p>
+        </div>
       </div>
 
       <div className="card-light mb-8">
@@ -135,7 +233,7 @@ export default function NewJerseyPage() {
           <li><strong>Self-Exclusion:</strong> Enroll in the NJDGE Self-Exclusion Program to ban yourself from all NJ casinos (online and land-based) for 1 year, 5 years, or permanently.</li>
           <li><strong>Reality Checks:</strong> Pop-up notifications showing your play time and net win/loss.</li>
         </ul>
-        <p className="mt-3 text-slate-700 leading-relaxed">If you or someone you know has a gambling problem, call the <strong>Council on Compulsive Gambling of New Jersey at 1-800-GAMBLER</strong> (1-800-426-2537) for free, confidential support available 24/7. You can also text "NJGAMB" to 898211 for assistance.</p>
+        <p className="mt-3 text-slate-700 leading-relaxed">If you or someone you know has a gambling problem, call the <strong>Council on Compulsive Gambling of New Jersey at 1-800-GAMBLER</strong> (1-800-426-2537) for free, confidential support available 24/7. You can also text "NJGAMB" to 898211 for assistance. Learn more on our <Link href="/responsible-gambling/" className="text-corg-500 hover:underline">responsible gambling page</Link>.</p>
       </div>
 
       <div className="rounded-2xl bg-gradient-to-br from-corg-500 to-corg-600 p-8 text-center">
