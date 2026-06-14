@@ -1,13 +1,26 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Best New Jersey Online Casinos 2026 — Legal NJ Gambling",
   description:
-    "Find the best legal online casinos in New Jersey for 2026. Compare NJ-licensed casinos including BetMGM, Caesars, Borgata, DraftKings, and Golden Nugget. Learn about NJDGE regulation, bonuses, and how to get started.",
+    "Find the best legal online casinos in New Jersey for 2026. Compare NJ-licensed casinos including BetMGM, Caesars, Borgata, DraftKings, and Golden Nugget. Learn about NJDGE regulation, bonuses, payment methods, and how to get started with NJ online casinos.",
   alternates: { canonical: "https://royalbetguide.com/region/new-jersey/" },
 };
 
 export default function NewJerseyPage() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Best New Jersey Online Casinos 2026 — Legal NJ Gambling",
+    description:
+      "Find the best legal online casinos in New Jersey for 2026. Compare NJ-licensed casinos including BetMGM, Caesars, Borgata, DraftKings, and Golden Nugget.",
+    author: { "@type": "Person", name: "Michael Thompson" },
+    publisher: { "@type": "Organization", name: "Royal Bet Guide", logo: { "@type": "ImageObject", url: "https://royalbetguide.com/logo.svg" } },
+    datePublished: "2026-03-01",
+    dateModified: "2026-06-13",
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -73,6 +86,7 @@ export default function NewJerseyPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="mb-10 text-center">
         <span className="inline-block rounded-full bg-corg-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-corg-500">US State Guide</span>
@@ -179,7 +193,7 @@ export default function NewJerseyPage() {
         <h2 className="text-xl font-bold text-corg-600">How to Get Started in New Jersey</h2>
         <p className="mt-3 text-slate-700 leading-relaxed">To play at a New Jersey online casino, you must be physically located within state borders and be at least 21 years old. Registration requires providing your name, address, date of birth, and social security number for verification. Geolocation software confirms your location. After verification, you can deposit using credit cards, PayPal, online banking, or PayNearMe and start playing immediately.</p>
         <p className="mt-3 text-slate-700 leading-relaxed">Withdrawal options in NJ include PayPal (often same-day), online bank transfer (ACH), Play+ prepaid cards, venue cashier (at the associated Atlantic City casino), and check by mail. NJDGE regulations require all casinos to process withdrawal requests within 48 hours, and e-wallet withdrawals like PayPal are typically available within 24 hours.</p>
-        <p className="mt-3 text-slate-700 leading-relaxed">Browse our full collection of <Link href="/reviews/" className="text-corg-500 hover:underline">NJ casino reviews</Link> for detailed comparisons of every Garden State operator, including bonus terms, game libraries, payment processing times, and mobile app ratings. For NJ sports betting, see our <Link href="/sports/new-jersey-sportsbooks/" className="text-corg-500 hover:underline">New Jersey sportsbooks guide</Link>.</p>
+        <p className="mt-3 text-slate-700 leading-relaxed">Browse our full collection of <Link href="/reviews/" className="text-corg-500 hover:underline">NJ casino reviews</Link> for detailed comparisons of every Garden State operator, including bonus terms, game libraries, payment processing times, and mobile app ratings. For NJ sports betting, see our <Link href="/sports/new-jersey-sportsbooks/" className="text-corg-500 hover:underline">New Jersey sportsbooks guide</Link>. If you are in Pennsylvania, check our <Link href="/region/pennsylvania/" className="text-corg-500 hover:underline">Pennsylvania online casinos guide</Link> for Keystone State options.</p>
       </div>
 
       <div className="card-light mb-8">
